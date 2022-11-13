@@ -15,7 +15,16 @@
     "sourceType": "module"
   },
   "rules": {
+    "no-console": "warn",
+    "import/no-cycle": "off",
+    "react/prop-types": "off",
+    "arrow-body-style": "off",
+    "no-underscore-dangle": "off",
+    "react/require-default-props": "off",
+    "import/prefer-default-export": "off",
     "react/jsx-props-no-spreading": "off",
+    "import/extensions": ["error", "never"],
+    "react/function-component-definition": "off",
     "react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }]
   }
 }
