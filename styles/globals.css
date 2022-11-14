@@ -1,3 +1,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Webfont: Merchant-SemiBoldCondensed */
+@font-face {
+  font-family: 'MerchantSemBdCond';
+  src: url('/fonts/Merchant-SemiBoldCondensed.woff2') format('woff2'),
+    /* Modern Browsers */ url('/Merchant-SemiBoldCondensed.otf')
+      format('opentype'); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Merchant-Thin */
+@font-face {
+  font-family: 'MerchantThin';
+  src: url('/fonts/Merchant-Thin.woff2') format('woff2'),
+    /* Modern Browsers */ url('/Merchant-Thin.otf') format('opentype'); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Merchant-Expanded */
+@font-face {
+  font-family: 'MerchantExp';
+  src: url('/fonts/Merchant-Expanded.woff2') format('woff2'),
+    /* Modern Browsers */ url('/Merchant-Expanded.otf') format('opentype'); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+/* Webfont: Merchant-ThinCondensed */
+@font-face {
+  font-family: 'MerchantThinCond';
+  src: url('/fonts/Merchant-ThinCondensed.woff2') format('woff2'),
+    /* Modern Browsers */ url('/Merchant-ThinCondensed.otf') format('opentype'); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+.font-merc {
+  font-family: MerchantThinCond, sans-serif;
+}
