@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: #000000;
+}
+
 /* Webfont: Merchant-SemiBoldCondensed */
 @font-face {
   font-family: 'MerchantSemBdCond';
