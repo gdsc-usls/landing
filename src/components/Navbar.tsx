@@ -8,7 +8,10 @@ export const Navbar = () => {
       <span className='logo font-merchant-expanded text-xl'>GDSC USLS</span>
       <ul className='flex flex-col space-y-1 lg:flex-row lg:space-y-0  lg:space-x-10'>
         {navText.map((text) => (
-          <li className='font-montserrat text-xs uppercase' key={text}>
+          <li
+            className='hover-effect font-montserrat text-xs uppercase'
+            key={text}
+          >
             <a href='#'>{text}</a>
           </li>
         ))}
