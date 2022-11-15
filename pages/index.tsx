@@ -11,7 +11,7 @@ export default function Home() {
         src='/images/elements/gridsDotted.png'
         alt='Dotted Grids'
         fill
-        className='pointer-events-none -translate-y-96 object-contain object-top opacity-60'
+        className='pointer-events-none -translate-y-96 object-contain object-top opacity-75'
       />
       <Image
         src='/images/gradients/gradientMain.png'

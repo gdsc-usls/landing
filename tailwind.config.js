@@ -12,6 +12,7 @@ module.exports = {
         'merchant-thin': ['MerchantThin', 'serif'],
         'merchant-expanded': ['MerchantExp', 'serif'],
         'merchant-thin-condensed': ['MerchantThinCond', 'serif'],
+        montserrat: ['Montserrat', 'sans-serif'],
       },
     },
   },
