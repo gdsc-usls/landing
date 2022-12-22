@@ -3,7 +3,8 @@
 
 echo '🏗️👷 Styling and testing your project before committing'
 
-yarn check-lint ||
+    # Check ESLint Standards
+yarn lint-staged ||
     (
         echo '❌ ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
         false
