@@ -9,6 +9,12 @@ body {
   background-color: #000000;
 }
 
+@layer components {
+  .text-mainTitle {
+    font-size: clamp(1.7rem, 7vw, 6rem);
+  }
+}
+
 /* Webfont: Merchant-SemiBoldCondensed */
 @font-face {
   font-family: 'MerchantSemBdCond';
