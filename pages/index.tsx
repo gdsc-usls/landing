@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main>
       <section className='relative m-auto grid h-[60vh] place-items-center md:h-screen'>
-        <h1 className='text-mainTitle z-10 translate-y-24 whitespace-nowrap text-center font-merchant-expanded leading-none text-white'>
+        <h1 className='text-mainTitle z-10 translate-y-24'>
           Powered by Intellect, <br /> Driven by Values
         </h1>
         <Image
@@ -14,7 +14,7 @@ export default function Home() {
           fill
           className='pointer-events-none object-contain object-top opacity-75 xl:-translate-y-96'
         />
-        <div className=''>
+        <div>
           <Image
             src='/images/gradients/gradientMain.png'
             alt='Google Color Gradients'
@@ -25,7 +25,7 @@ export default function Home() {
             src='/images/elements/gdscLines.png'
             alt='Google Color Lines'
             fill
-            className='pointer-events-none z-[-1] translate-y-56 object-contain object-bottom px-8 md:translate-y-[30rem]'
+            className='pointer-events-none z-[-1] translate-y-56 object-contain object-bottom px-8 md:translate-y-[27rem] lg:translate-y-[30rem]'
           />
           <Image
             src='/images/elements/gdscLogoGlass.png'
@@ -43,13 +43,16 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className='relative overflow-x-hidden overflow-y-clip py-96 px-32 text-white'>
+      {/*
+       2nd Section 
+       */}
+      <section className='relative overflow-x-hidden overflow-y-clip py-48 px-10 text-white sm:py-56 md:px-20 md:py-96 lg:px-32 xl:py-[26rem]'>
         <Image
           src='/images/gradients/gradientGreenBlue.png'
           alt='Gradient Green'
           height={800}
           width={800}
-          className='pointer-events-none absolute top-1/2 -left-[36rem] z-[-1]'
+          className='pointer-events-none absolute top-[30%] -left-72 z-[-1] sm:-left-96 md:-left-[30rem]'
         />
         <Image
           src='/images/elements/gridsDotted.png'
@@ -57,39 +60,39 @@ export default function Home() {
           fill
           className='pointer-events-none z-[-2] translate-y-1/3 object-contain object-top opacity-80'
         />
-        <div className='mx-auto mb-40 w-3/4'>
-          <h2 className='mr-auto mb-10 font-merchant-expanded text-7xl'>
+        <div className='mx-auto mb-40 xl:w-3/4'>
+          <h2 className='text-title mr-auto mb-5 sm:mb-10'>
             Google Developer <br /> Student Clubs —
           </h2>
-          <p className='ml-auto w-[65%] text-right font-merchant-thin text-2xl'>
+          <p className='text-body ml-auto w-full text-right font-merchant-thin sm:w-[80%] md:leading-8 lg:w-[65%]'>
             The quick brown fox jumps over the lazy dog near the bank of the
             river the quick brown fox jumps over the lazy dog near the bank of
             the river.
           </p>
         </div>
-        <div className='flex justify-between'>
+        <div className='flex flex-col-reverse gap-20  lg:flex-row lg:justify-between'>
           <Image
             src='/images/elements/swirlGlass.png'
             alt='Swirl Glass'
             height={800}
             width={600}
-            className='pointer-events-none translate-x-40 -translate-y-20'
+            className='pointer-events-none -translate-y-20  rotate-12 md:rotate-0  xl:translate-x-40'
           />
-          <div>
-            <p className='font-merchant-semibold text-[10rem] leading-[0.7]'>
+          <div className='ml-auto flex flex-col text-right'>
+            <p className='font-merchant-semibold leading-[0.7] [fontSize:clamp(5rem,15vw,10rem)]'>
               USLS
             </p>
-            <p className='text-md text-right font-montserrat uppercase'>
+            <p className='text-right font-montserrat uppercase [fontSize:clamp(0.6rem,1.5vw,1rem)]'>
               University of St. La Salle <br /> — Bacolod{' '}
             </p>
           </div>
         </div>
-        <div className='relative grid place-items-center'>
-          <div className='text-white'>
-            <h3 className='-translate-x-40 text-center font-merchant-expanded text-7xl'>
+        <div className='relative'>
+          <div className='mx-auto text-white xl:w-3/4'>
+            <h3 className='text-title mb-2  md:mb-5 lg:translate-x-6 2xl:-translate-x-20 2xl:text-center'>
               GDSC - USLS
             </h3>
-            <p className='mx-auto w-1/2 font-merchant-thin text-2xl'>
+            <p className='text-body font-merchant-thin sm:w-[80%] lg:mx-auto 2xl:w-1/2'>
               The quick brown fox jumps over the lazy dog near the bank of the
               river the quick brown fox jumps over the lazy dog near the bank of
               the river.
@@ -100,7 +103,7 @@ export default function Home() {
             alt='Gradient Yellow'
             height={800}
             width={800}
-            className='pointer-events-none absolute top-1/2 -right-[36rem] z-[-1]'
+            className='pointer-events-none absolute top-1/2 -right-60 z-[-1] sm:-right-96 md:-right-[30rem] lg:-right-[36rem]'
           />
         </div>
       </section>
