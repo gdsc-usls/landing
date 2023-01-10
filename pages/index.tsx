@@ -9,6 +9,7 @@ export default function Home() {
           Powered by Intellect, <br /> Driven by Values
         </h1>
         <Image
+          priority
           src='/images/elements/gridsDotted.png'
           alt='Dotted Grids'
           fill
@@ -16,18 +17,21 @@ export default function Home() {
         />
         <div>
           <Image
+            priority
             src='/images/gradients/gradientMain.png'
             alt='Google Color Gradients'
             fill
             className='pointer-events-none object-contain object-bottom'
           />
           <Image
+            priority
             src='/images/elements/gdscLines.png'
             alt='Google Color Lines'
             fill
             className='pointer-events-none z-[-1] translate-y-56 object-contain object-bottom px-8 md:translate-y-[27rem] lg:translate-y-[30rem]'
           />
           <Image
+            priority
             src='/images/elements/gdscLogoGlass.png'
             alt='GDSC Logo Glass'
             height={500}
@@ -35,6 +39,7 @@ export default function Home() {
             className='pointer-events-none absolute bottom-0 -right-4 translate-y-1/2 scale-90'
           />
           <Image
+            priority
             src='/images/elements/arrowDown.png'
             alt='Arrow Down'
             height={300}
@@ -48,6 +53,7 @@ export default function Home() {
        */}
       <section className='relative overflow-x-hidden overflow-y-clip py-48 px-10 text-white sm:py-56 md:px-20 md:py-96 lg:px-32 xl:py-[26rem]'>
         <Image
+          priority
           src='/images/gradients/gradientGreenBlue.png'
           alt='Gradient Green'
           height={800}
@@ -55,6 +61,7 @@ export default function Home() {
           className='pointer-events-none absolute top-[30%] -left-72 z-[-1] sm:-left-96 md:-left-[30rem]'
         />
         <Image
+          priority
           src='/images/elements/gridsDotted.png'
           alt='Dotted Grids'
           fill
@@ -72,6 +79,7 @@ export default function Home() {
         </div>
         <div className='flex flex-col-reverse gap-20  lg:flex-row lg:justify-between'>
           <Image
+            priority
             src='/images/elements/swirlGlass.png'
             alt='Swirl Glass'
             height={800}
@@ -99,6 +107,7 @@ export default function Home() {
             </p>
           </div>
           <Image
+            priority
             src='/images/gradients/gradientYellowRed.png'
             alt='Gradient Yellow'
             height={800}
