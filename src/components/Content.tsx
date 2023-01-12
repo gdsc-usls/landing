@@ -1,10 +1,11 @@
 import React from 'react';
-import { About } from '.';
+import { About, Events } from '.';
 
 export const Content = () => {
   return (
-    <section>
+    <section className='overflow-x-hidden overflow-y-clip '>
       <About />
+      <Events />
     </section>
   );
 };

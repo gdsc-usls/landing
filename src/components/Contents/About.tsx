@@ -3,13 +3,13 @@ import Image from 'next/image';
 
 export const About = () => {
   return (
-    <div className='relative overflow-x-hidden overflow-y-clip py-48 px-10 text-white sm:py-56 md:px-20 md:py-96 lg:px-32 xl:py-[26rem]'>
+    <div className='relative mb-48 px-10 pt-48 text-white sm:pt-56 md:mb-80 md:px-20 md:pt-96 lg:mb-96 lg:px-32 xl:pt-[26rem]'>
       <Image
         priority
         src='/images/gradients/gradientGreenBlue.png'
         alt='Gradient Green'
-        height={800}
-        width={800}
+        height={1000}
+        width={1000}
         className='pointer-events-none absolute top-[30%] -left-72 z-[-1] sm:-left-96 md:-left-[30rem]'
       />
       <Image
@@ -18,6 +18,13 @@ export const About = () => {
         alt='Dotted Grids'
         fill
         className='pointer-events-none z-[-2] translate-y-1/3 object-contain object-top opacity-80'
+      />
+      <Image
+        priority
+        src='/images/elements/gridsDotted.png'
+        alt='Dotted Grids'
+        fill
+        className='pointer-events-none z-[-2] translate-y-[80%] object-contain object-top opacity-80'
       />
       <div className='mx-auto mb-40 xl:w-3/4'>
         <h2 className='text-title mr-auto mb-5 sm:mb-10'>
@@ -58,14 +65,6 @@ export const About = () => {
             the river.
           </p>
         </div>
-        <Image
-          priority
-          src='/images/gradients/gradientYellowRed.png'
-          alt='Gradient Yellow'
-          height={800}
-          width={800}
-          className='pointer-events-none absolute top-1/2 -right-60 z-[-1] sm:-right-96 md:-right-[30rem] lg:-right-[36rem]'
-        />
       </div>
     </div>
   );
