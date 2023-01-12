@@ -15,7 +15,7 @@ body {
   }
 
   .text-title {
-    @apply whitespace-nowrap font-merchant-expanded leading-8 [fontSize:clamp(1.7rem,5.5vw,4.8rem)] sm:leading-tight lg:leading-none;
+    @apply font-merchant-expanded leading-8 [fontSize:clamp(1.7rem,5.5vw,4.8rem)] sm:leading-tight lg:leading-none;
   }
 
   .text-body {

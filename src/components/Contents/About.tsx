@@ -10,7 +10,7 @@ export const About = () => {
         alt='Gradient Green'
         height={1000}
         width={1000}
-        className='pointer-events-none absolute top-[30%] -left-72 z-[-1] sm:-left-96 md:-left-[30rem]'
+        className='pointer-events-none absolute top-[35%] left-0 z-[-1] mr-40 scale-x-[-1]'
       />
       <Image
         priority
@@ -27,7 +27,7 @@ export const About = () => {
         className='pointer-events-none z-[-2] translate-y-[80%] object-contain object-top opacity-80'
       />
       <div className='mx-auto mb-40 xl:w-3/4'>
-        <h2 className='text-title mr-auto mb-5 sm:mb-10'>
+        <h2 className='text-title mr-auto mb-5 whitespace-nowrap sm:mb-10'>
           Google Developer <br /> Student Clubs —
         </h2>
         <p className='text-body ml-auto w-full text-right font-merchant-thin sm:w-[80%] md:leading-8 lg:w-[65%]'>

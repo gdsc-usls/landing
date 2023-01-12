@@ -29,7 +29,10 @@ export const Events = () => {
     <div className='relative px-10 pb-20 md:px-20 lg:px-32'>
       <ul>
         {events.map((event) => (
-          <li className='border-b-[1px] border-b-gray-200 py-6 text-white md:py-8 lg:py-10'>
+          <li
+            key={event.title}
+            className='border-b-[1px] border-b-gray-200 py-6 text-white md:py-8 lg:py-10'
+          >
             <p className='mb-1 font-montserrat uppercase [fontSize:clamp(0.6rem,1.5vw,1rem)] lg:mb-2  xl:mb-4'>
               {event.date}
             </p>
@@ -46,9 +49,9 @@ export const Events = () => {
         priority
         src='/images/gradients/gradientYellowRed.png'
         alt='Gradient Yellow'
-        height={1300}
-        width={1300}
-        className='pointer-events-none absolute -top-1/2 -right-60 z-[-1] sm:-right-96 md:-right-[30rem] lg:-right-[45rem]'
+        height={1000}
+        width={1000}
+        className='pointer-events-none absolute -top-1/2 right-0'
       />
     </div>
   );
