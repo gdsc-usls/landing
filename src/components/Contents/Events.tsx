@@ -26,7 +26,7 @@ export const Events = () => {
   ];
 
   return (
-    <div className='relative px-10 pb-20 md:px-20 lg:px-32'>
+    <div className='container relative pb-20'>
       <ul>
         {events.map((event) => (
           <li

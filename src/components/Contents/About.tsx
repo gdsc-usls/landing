@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const About = () => {
   return (
-    <div className='relative mb-48 px-10 pt-48 text-white sm:pt-56 md:mb-80 md:px-20 md:pt-96 lg:mb-96 lg:px-32 xl:pt-[26rem]'>
+    <div className='container relative mb-48 pt-48 text-white sm:pt-56 md:mb-80 md:pt-96 lg:mb-96 xl:pt-[26rem]'>
       <Image
         priority
         src='/images/gradients/gradientGreenBlue.png'
