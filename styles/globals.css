@@ -22,7 +22,7 @@ body {
     @apply font-merchant-thin [fontSize:clamp(1rem,3vw,1.5rem)];
   }
 
-  .container {
+  .contain {
     @apply px-10 md:px-20 lg:px-32;
   }
 }

@@ -19,7 +19,7 @@ export const Partners = () => {
 
   return (
     <div className='my-32 md:my-52'>
-      <p className='container text-center font-merchant-thin-condensed text-white [fontSize:clamp(1.3rem,4vw,3rem)]'>
+      <p className='contain text-center font-merchant-thin-condensed text-white [fontSize:clamp(1.3rem,4vw,3rem)]'>
         A community built with trusted companies and partners
       </p>
 
