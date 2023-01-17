@@ -25,6 +25,10 @@ body {
   .contain {
     @apply px-10 md:px-20 lg:px-32;
   }
+
+  .testimony {
+    @apply flex flex-col gap-[40rem] border-x-[1px] border-x-gray-500 px-12 py-60;
+  }
 }
 
 /* Webfont: Merchant-SemiBoldCondensed */

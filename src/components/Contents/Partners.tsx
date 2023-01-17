@@ -18,7 +18,7 @@ export const Partners = () => {
   ];
 
   return (
-    <div className='my-32 md:my-52'>
+    <div className='my-52 md:my-72 xl:my-80'>
       <p className='contain text-center font-merchant-thin-condensed text-white [fontSize:clamp(1.3rem,4vw,3rem)]'>
         A community built with trusted companies and partners
       </p>

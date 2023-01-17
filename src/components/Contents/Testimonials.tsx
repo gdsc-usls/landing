@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export const Testimonials = () => {
   const testimonials = [
@@ -35,9 +36,9 @@ export const Testimonials = () => {
   ];
 
   return (
-    <div className='contain mb-32 text-white md:mb-52'>
-      <div className='mb-72'>
-        <h3 className='text-title mb-5 w-[55%]'>
+    <div className='contain relative mb-32 text-white md:mb-52'>
+      <div className='mb-96'>
+        <h3 className='text-title mb-5 w-[60%]'>
           See what lorempsu sit testimonials
         </h3>
         <div className='grid grid-cols-2 border-t-[1px] border-t-white pt-5'>
@@ -50,16 +51,16 @@ export const Testimonials = () => {
         </div>
       </div>
 
-      <div className='relative flex gap-64'>
-        <div className='flex h-full gap-24'>
-          <span className='after:bg-blue-700' />
-          <span className='after:bg-green-700' />
-          <span className='after:bg-red-700' />
-          <span className='after:bg-yellow-700' />
+      <div className='relative flex gap-60'>
+        <div className='flex gap-20 self-stretch [&>*]:border-r-[1px] [&>*:after]:content-[""]'>
+          <span className='border-r-blue-800' />
+          <span className='border-r-green-800' />
+          <span className='border-r-red-800' />
+          <span className='border-r-yellow-800' />
         </div>
 
-        <div className='flex'>
-          <div className='flex flex-col gap-[40rem] border-x-[1px] border-x-gray-500 px-12'>
+        <div className='grid grid-cols-2'>
+          <div className='testimony'>
             {testimonials.map((testimonial, i) => {
               return (
                 (i + 1) % 2 !== 0 && (
@@ -69,7 +70,7 @@ export const Testimonials = () => {
             })}
           </div>
 
-          <div className='flex flex-col justify-center gap-[40rem] border-r-[1px] border-r-gray-500 px-12'>
+          <div className='testimony justify-center'>
             {testimonials.map((testimonial, i) => {
               return (
                 (i + 1) % 2 === 0 && (
@@ -80,6 +81,14 @@ export const Testimonials = () => {
           </div>
         </div>
       </div>
+      <Image
+        priority
+        src='/images/gradients/gradientBlueGreen.png'
+        alt='Gradient Blue'
+        height={900}
+        width={900}
+        className='pointer-events-none absolute top-72 right-0'
+      />
     </div>
   );
 };
