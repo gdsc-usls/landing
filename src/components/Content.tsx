@@ -1,5 +1,5 @@
 import React from 'react';
-import { About, Events, Partners } from '.';
+import { About, Events, Partners, Testimonials } from '.';
 
 export const Content = () => {
   return (
@@ -7,6 +7,7 @@ export const Content = () => {
       <About />
       <Events />
       <Partners />
+      <Testimonials />
     </section>
   );
 };
