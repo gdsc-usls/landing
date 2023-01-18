@@ -51,20 +51,20 @@ export const Testimonials = () => {
         </div>
       </div>
 
-      <div className='relative flex gap-60'>
-        <div className='flex gap-20 self-stretch [&>*]:border-r-[1px] [&>*:after]:content-[""]'>
+      <div className='relative flex gap-10 xl:gap-60'>
+        <div className='flex gap-5 self-stretch xl:gap-20 [&>*]:border-r-[1px] [&>*:after]:content-[""]'>
           <span className='border-r-blue-800' />
           <span className='border-r-green-800' />
           <span className='border-r-red-800' />
           <span className='border-r-yellow-800' />
         </div>
 
-        <div className='grid grid-cols-2'>
+        <div className='grid grid-cols-1 xl:grid-cols-2'>
           <div className='testimony'>
             {testimonials.map((testimonial, i) => {
               return (
                 (i + 1) % 2 !== 0 && (
-                  <Message key={testimonial.name} index={i} {...testimonial} />
+                  <Message key={testimonial.name} {...testimonial} />
                 )
               );
             })}
@@ -74,7 +74,7 @@ export const Testimonials = () => {
             {testimonials.map((testimonial, i) => {
               return (
                 (i + 1) % 2 === 0 && (
-                  <Message key={testimonial.name} index={i} {...testimonial} />
+                  <Message key={testimonial.name} {...testimonial} />
                 )
               );
             })}
@@ -94,17 +94,15 @@ export const Testimonials = () => {
 };
 
 interface MessageProps {
-  index: number;
   name: string;
   role: string;
   message: string;
 }
 
-const Message = ({ index, name, role, message }: MessageProps) => {
+const Message = ({ name, role, message }: MessageProps) => {
   return (
     <div>
       <div className='mb-3  flex gap-4'>
-        <span className='font-merchant-thin text-5xl'>{index + 1}.</span>
         <div className='font-montserrat'>
           <p className='font-medium'>{name}</p>
           <p className='font-light text-gray-300'>{role}</p>
