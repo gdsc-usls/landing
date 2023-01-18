@@ -4,10 +4,10 @@ import Image from 'next/image';
 export const Testimonials = () => {
   const testimonials = [
     {
-      name: 'Gio Divino',
-      role: 'Software Engineer',
+      name: 'Ashley Ko',
+      role: 'UI/UX Designer',
       message:
-        'I was able to hone my technical skills and build meaningful realtionships with this inclusive community.',
+        'GDSC became the playground that helped me furhter my tech skills and meet amazing people, while also ampluifying our own individualities.',
     },
     {
       name: 'Renzo Tan',
@@ -22,27 +22,27 @@ export const Testimonials = () => {
         'I am proud to say that I have learned a lot of new stuff BUT I know that there is still so much more to explore and learn in the world of technology!',
     },
     {
+      name: 'Gio Divino',
+      role: 'Software Engineer',
+      message:
+        'I was able to hone my technical skills and build meaningful relationships with this inclusive community.',
+    },
+    {
       name: 'Franz Taborlupa',
       role: 'Data Scientist',
       message:
         'GDSC helped me become the leader I am today and carved the path for me towards data science.',
     },
-    {
-      name: 'Ashley Ko',
-      role: 'UI/UX Designer',
-      message:
-        'GDSC became the playground that helped me furhter my tech skills and meet amazing people, while also ampluifying our own individualities.',
-    },
   ];
 
   return (
     <div className='contain relative mb-32 pt-20 text-white md:mb-52'>
-      <div className='mb-96'>
-        <h3 className='text-title mb-5 w-[60%]'>
+      <div className='mb-44 md:mb-64 xl:mb-96'>
+        <h3 className='text-title mb-7 w-[80%] xl:mb-10 2xl:w-[60%]'>
           See what lorempsu sit testimonials
         </h3>
-        <div className='grid grid-cols-2 border-t-[1px] border-t-white pt-5'>
-          <p className='text-body uppercase'>About Us</p>
+        <div className='grid-cols-2 border-t-[1px] border-t-white pt-7 xl:grid xl:pt-10'>
+          <p className='text-body mb-3 uppercase xl:mb-0'>About Us</p>
           <p className='text-body'>
             The quick brown fox jumps over the lazy dog near the bank of the
             river Reference site about Lorem Ipsum, giving information on its
@@ -87,7 +87,7 @@ export const Testimonials = () => {
         alt='Gradient Blue'
         height={900}
         width={900}
-        className='pointer-events-none absolute top-72 right-0'
+        className='pointer-events-none invisible absolute -right-20 top-72 scale-y-75 lg:right-0 lg:scale-y-100 xl:visible'
       />
     </div>
   );
