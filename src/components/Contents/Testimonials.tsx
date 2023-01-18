@@ -36,7 +36,7 @@ export const Testimonials = () => {
   ];
 
   return (
-    <div className='contain relative mb-32 text-white md:mb-52'>
+    <div className='contain relative mb-32 pt-20 text-white md:mb-52'>
       <div className='mb-96'>
         <h3 className='text-title mb-5 w-[60%]'>
           See what lorempsu sit testimonials
@@ -103,11 +103,11 @@ interface MessageProps {
 const Message = ({ index, name, role, message }: MessageProps) => {
   return (
     <div>
-      <div className='mb-3 flex gap-4'>
+      <div className='mb-3  flex gap-4'>
         <span className='font-merchant-thin text-5xl'>{index + 1}.</span>
         <div className='font-montserrat'>
           <p className='font-medium'>{name}</p>
-          <p className='font-light'>{role}</p>
+          <p className='font-light text-gray-300'>{role}</p>
         </div>
       </div>
       <p className='text-body'>
