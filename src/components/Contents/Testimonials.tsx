@@ -51,15 +51,15 @@ export const Testimonials = () => {
         </div>
       </div>
 
-      <div className='relative flex gap-10 xl:gap-60'>
-        <div className='flex gap-5 self-stretch xl:gap-20 [&>*]:border-r-[1px] [&>*:after]:content-[""]'>
+      <div className='relative flex gap-6 sm:gap-10 md:gap-20 lg:gap-28 2xl:gap-60'>
+        <div className='flex gap-5 self-stretch sm:gap-8 md:gap-10 lg:gap-14 2xl:gap-20 [&>*]:border-r-[1px] [&>*:after]:content-[""]'>
           <span className='border-r-blue-800' />
           <span className='border-r-green-800' />
           <span className='border-r-red-800' />
           <span className='border-r-yellow-800' />
         </div>
 
-        <div className='grid grid-cols-1 xl:grid-cols-2'>
+        <div className='grid grid-cols-1 gap-40 md:gap-52 md:border-x-[1px] md:border-x-gray-500 md:px-12 lg:gap-60 xl:grid-cols-2 xl:gap-0 xl:border-x-0'>
           <div className='testimony'>
             {testimonials.map((testimonial, i) => {
               return (
@@ -102,10 +102,12 @@ interface MessageProps {
 const Message = ({ name, role, message }: MessageProps) => {
   return (
     <div>
-      <div className='mb-3  flex gap-4'>
+      <div className='mb-3 flex gap-4'>
         <div className='font-montserrat'>
-          <p className='font-medium'>{name}</p>
-          <p className='font-light text-gray-300'>{role}</p>
+          <p className='text-sm font-medium md:text-base'>{name}</p>
+          <p className='text-sm font-light text-gray-300 md:text-base'>
+            {role}
+          </p>
         </div>
       </div>
       <p className='text-body'>

@@ -27,7 +27,7 @@ body {
   }
 
   .testimony {
-    @apply flex flex-col gap-[40rem] border-x-[1px] border-x-gray-500 px-12 py-60;
+    @apply flex flex-col gap-40 md:gap-52 lg:gap-60 xl:gap-[40rem] xl:border-x-[1px] xl:border-x-gray-500 xl:py-60 xl:px-12;
   }
 }
 
