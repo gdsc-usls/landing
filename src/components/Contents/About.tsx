@@ -6,6 +6,13 @@ export const About = () => {
     <div className='contain relative mb-48 pt-48 text-white sm:pt-56 md:mb-80 md:pt-96 lg:mb-96 xl:pt-[26rem]'>
       <Image
         priority
+        src='/images/gradients/gradientMain.png'
+        alt='Google Color Gradients'
+        fill
+        className='pointer-events-none z-[-1] scale-y-[-1] object-contain object-bottom'
+      />
+      <Image
+        priority
         src='/images/gradients/gradientGreenBlue.png'
         alt='Gradient Green'
         height={1000}
