@@ -12,11 +12,13 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@types/gsap": "^3.0.0",
     "@types/node": "18.11.9",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.8",
     "eslint": "^8.2.0",
     "eslint-config-next": "13.0.3",
+    "gsap": "^3.11.4",
     "next": "13.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
