@@ -33,21 +33,40 @@ export const Loader = () => {
         },
         '+=0.7'
       )
-      .to(
-        '#loader-bg',
-        {
-          duration: 1,
-          opacity: 0,
-        },
-        '+=0.5'
-      )
+      .to('#loader-bg', {
+        duration: 0.8,
+        opacity: 0,
+      })
       .to(
         'body',
         {
           overflowY: 'auto',
-          onComplete: () => setUnmount(true),
         },
         '>'
+      )
+      .to(
+        '.p-nav, .logo',
+        {
+          duration: 0.5,
+          opacity: 1,
+          stagger: -0.2,
+        },
+        '-=1'
+      )
+      .fromTo(
+        '.h1-anim',
+        {
+          clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)',
+          y: 20,
+        },
+        {
+          clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+          duration: 0.8,
+          stagger: 0.3,
+          y: 0,
+          onComplete: () => setUnmount(true),
+        },
+        '<'
       );
   };
 
@@ -79,8 +98,8 @@ export const Loader = () => {
               priority
               src='/images/icons/gdsc-logo.svg'
               alt='GDSC Logo'
-              height={120}
-              width={120}
+              height={100}
+              width={100}
               className='mx-auto mb-5 scale-75 opacity-0 md:scale-100'
               id='gdsc-logo'
             />

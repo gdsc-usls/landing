@@ -4,8 +4,10 @@ import Image from 'next/image';
 export const Hero = () => {
   return (
     <section className='relative m-auto grid h-[60vh] place-items-center md:h-screen'>
-      <h1 className='text-mainTitle z-10 translate-y-24'>
-        Powered by Intellect, <br /> Driven by Values
+      <h1 className='text-mainTitle z-10 flex translate-y-24 flex-col gap-1 md:gap-2'>
+        <p className='h1-anim'>Powered by Intellect,</p>
+        <br />
+        <p className='h1-anim'>Driven by Values</p>
       </h1>
       <Image
         priority
