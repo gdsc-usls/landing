@@ -3,7 +3,10 @@ import Image from 'next/image';
 
 export const Hero = () => {
   return (
-    <section className='relative m-auto grid h-[60vh] place-items-center md:h-screen'>
+    <section
+      id='hero-section'
+      className='relative m-auto grid h-[60vh] place-items-center md:h-screen'
+    >
       <h1 className='text-mainTitle z-10 flex translate-y-24 flex-col gap-1 md:gap-2'>
         <p className='h1-anim'>Powered by Intellect,</p>
         <br />
@@ -32,6 +35,7 @@ export const Hero = () => {
           className='pointer-events-none z-[-1] translate-y-56 object-contain object-bottom px-8 md:translate-y-[27rem] lg:translate-y-[30rem]'
         />
         <Image
+          id='gdsc-glass-logo'
           priority
           src='/images/elements/gdscLogoGlass.png'
           alt='GDSC Logo Glass'
@@ -40,6 +44,7 @@ export const Hero = () => {
           className='pointer-events-none absolute bottom-0 -right-4 translate-y-1/2 scale-90'
         />
         <Image
+          id='arrow-down'
           priority
           src='/images/elements/arrowDown.png'
           alt='Arrow Down'

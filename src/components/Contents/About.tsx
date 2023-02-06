@@ -3,7 +3,10 @@ import Image from 'next/image';
 
 export const About = () => {
   return (
-    <div className='contain relative mb-48 pt-48 text-white sm:pt-56 md:mb-80 md:pt-96 lg:mb-96 xl:pt-[26rem]'>
+    <div
+      id='about-section'
+      className='contain relative mb-48 pt-48 text-white sm:pt-56 md:mb-80 md:pt-96 lg:mb-96 xl:pt-[26rem]'
+    >
       <Image
         priority
         src='/images/gradients/gradientMain.png'
@@ -34,10 +37,16 @@ export const About = () => {
         className='pointer-events-none z-[-2] translate-y-[80%] object-contain object-top opacity-80'
       />
       <div className='mx-auto mb-40 xl:w-3/4'>
-        <h2 className='text-title mr-auto mb-5 whitespace-nowrap sm:mb-10'>
+        <h2
+          id='about-gdsc-title'
+          className='text-title mr-auto mb-5 whitespace-nowrap opacity-0 sm:mb-10'
+        >
           Google Developer <br /> Student Clubs —
         </h2>
-        <p className='text-body ml-auto w-full text-right font-merchant-thin sm:w-[80%] md:leading-8 lg:w-[65%]'>
+        <p
+          id='about-gdsc-paragraph'
+          className='text-body ml-auto w-full text-right font-merchant-thin opacity-0 sm:w-[80%] md:leading-8 lg:w-[65%]'
+        >
           The quick brown fox jumps over the lazy dog near the bank of the river
           the quick brown fox jumps over the lazy dog near the bank of the
           river.
