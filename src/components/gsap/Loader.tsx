@@ -49,9 +49,9 @@ export const Loader = () => {
         {
           duration: 0.5,
           opacity: 1,
-          stagger: -0.2,
+          stagger: 0.2,
         },
-        '-=1'
+        '-=0.8'
       )
       .fromTo(
         '.h1-anim',

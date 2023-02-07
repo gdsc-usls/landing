@@ -7,18 +7,18 @@ const HandScrollAnimation = ({ children }: { children: React.ReactNode }) => {
   gsap.registerPlugin(ScrollTrigger);
 
   // Fn for creating a new scrollTrigger instance
-  function scrollTrig(trigger: string, start: string, scrub: number | boolean) {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger,
-        start,
-        scrub,
-        // markers: true,
-      },
-    });
+  // function scrollTrig(trigger: string, start: string, scrub: number | boolean) {
+  //   const tl = gsap.timeline({
+  //     scrollTrigger: {
+  //       trigger,
+  //       start,
+  //       scrub,
+  //       // markers: true,
+  //     },
+  //   });
 
-    return tl;
-  }
+  //   return tl;
+  // }
 
   // Responsible for onScroll (intersection) animation
   function scrollTrigText(trigger: string, target: string, start?: string) {
@@ -34,19 +34,18 @@ const HandScrollAnimation = ({ children }: { children: React.ReactNode }) => {
   }
 
   useLayoutEffect(() => {
-    const heroTl = scrollTrig('#hero-section', 'bottom bottom', 0.7);
-
-    heroTl
-      .to('#gdsc-glass-logo', {
-        scale: 0.8,
-      })
-      .to(
-        '#arrow-down',
-        {
-          y: -60,
+    gsap
+      // .to('#gdsc-glass-logo', {
+      //   y: -0.1,
+      // })
+      .to('#arrow-down', {
+        scrollTrigger: {
+          trigger: '#hero-section',
+          start: 'bottom bottom',
+          scrub: 0.7,
         },
-        '<'
-      );
+        y: -60,
+      });
 
     // Responsible for onScroll (intersection) animation
     const textsTarget = [

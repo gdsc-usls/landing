@@ -50,7 +50,7 @@ export const Hero = () => {
           alt='Arrow Down'
           height={300}
           width={300}
-          className='pointer-events-none absolute -left-[5.5rem] bottom-28 translate-y-1/2 scale-[0.3] mix-blend-overlay sm:bottom-40 sm:-left-12 sm:scale-[0.5] md:bottom-48 xl:left-0 xl:scale-[0.7] 2xl:left-32 2xl:scale-[.80]'
+          className='pointer-events-none absolute -left-[5.5rem] -bottom-5 translate-y-1/2 scale-[0.3] mix-blend-overlay sm:bottom-10 sm:-left-12 sm:scale-[0.5] md:bottom-48 xl:left-0 xl:scale-[0.7] 2xl:left-32 2xl:scale-[.80]'
         />
       </div>
     </section>
