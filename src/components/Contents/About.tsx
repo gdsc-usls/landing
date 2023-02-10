@@ -61,36 +61,21 @@ export const About = () => {
           width={600}
           className='pointer-events-none -translate-y-20 rotate-12 md:rotate-0  xl:translate-x-40'
         />
-        <div
-          id='usls-title-contain'
-          className='ml-auto flex flex-col text-right'
-        >
-          <p
-            id='usls-title'
-            className='font-merchant-semibold leading-[0.7] opacity-0 [fontSize:clamp(5rem,15vw,10rem)]'
-          >
+        <div id='usls-title' className='ml-auto flex flex-col text-right'>
+          <p className='font-merchant-semibold leading-[0.7] opacity-0 [fontSize:clamp(5rem,15vw,10rem)]'>
             USLS
           </p>
-          <p
-            id='usls-title-p'
-            className='text-right font-montserrat uppercase opacity-0 [fontSize:clamp(0.6rem,1.5vw,1rem)]'
-          >
+          <p className='text-right font-montserrat uppercase opacity-0 [fontSize:clamp(0.6rem,1.5vw,1rem)]'>
             University of St. La Salle <br /> — Bacolod{' '}
           </p>
         </div>
       </div>
       <div className='relative'>
-        <div className='mx-auto text-white xl:w-3/4'>
-          <h3
-            id='gdsc-usls-title'
-            className='text-title mb-2 opacity-0  md:mb-5 lg:translate-x-6 2xl:-translate-x-20 2xl:text-center'
-          >
+        <div id='gdsc-usls-title' className='mx-auto text-white xl:w-3/4'>
+          <h3 className='text-title mb-2 opacity-0  md:mb-5 lg:translate-x-6 2xl:-translate-x-20 2xl:text-center'>
             GDSC - USLS
           </h3>
-          <p
-            id='gdsc-usls-title-p'
-            className='text-body font-merchant-thin opacity-0 sm:w-[80%] lg:mx-auto 2xl:w-1/2'
-          >
+          <p className='text-body font-merchant-thin opacity-0 sm:w-[80%] lg:mx-auto 2xl:w-1/2'>
             The quick brown fox jumps over the lazy dog near the bank of the
             river the quick brown fox jumps over the lazy dog near the bank of
             the river.

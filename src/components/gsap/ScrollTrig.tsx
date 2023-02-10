@@ -21,7 +21,12 @@ const HandScrollAnimation = ({ children }: { children: React.ReactNode }) => {
   // }
 
   // Responsible for onScroll (intersection) animation
-  function scrollTrigText(trigger: string, target: string, start?: string) {
+  function scrollTrigText(
+    trigger: string,
+    target: string,
+    start?: string,
+    stag?: number
+  ) {
     gsap.to(target, {
       scrollTrigger: {
         trigger: trigger as string,
@@ -30,6 +35,7 @@ const HandScrollAnimation = ({ children }: { children: React.ReactNode }) => {
       },
       opacity: 1,
       duration: 0.8,
+      stagger: stag,
     });
   }
 
@@ -61,24 +67,24 @@ const HandScrollAnimation = ({ children }: { children: React.ReactNode }) => {
         start: 'top 75%',
       },
       {
-        trigger: '#usls-title-contain',
-        target: '#usls-title-p',
+        trigger: '#usls-title',
+        target: '#usls-title p',
         start: 'top 75%',
+        stag: 0.3,
       },
       {
         trigger: '#gdsc-usls-title',
+        target: '#gdsc-usls-title h3, #gdsc-usls-title p',
+        stag: 0.3,
       },
       {
-        trigger: '#gdsc-usls-title-p',
+        trigger: '#events li',
+        stag: 0.4,
       },
     ];
 
-    textsTarget.forEach((text) => {
-      scrollTrigText(
-        text.trigger,
-        text.target ? text.target : text.trigger,
-        text.start
-      );
+    textsTarget.forEach(({ trigger, target, start, stag }) => {
+      scrollTrigText(trigger, target || trigger, start, stag);
     });
   }, []);
 
