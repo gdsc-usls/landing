@@ -36,7 +36,10 @@ export const Testimonials = () => {
   ];
 
   return (
-    <div className='contain relative mb-32 pt-20 text-white md:mb-52'>
+    <section
+      id='testimonials-section'
+      className='contain relative mb-32 pt-20 text-white md:mb-52'
+    >
       <div className='mb-44 md:mb-64 xl:mb-96'>
         <h3 className='text-title mb-7 w-[80%] xl:mb-10 2xl:w-[60%]'>
           See what lorempsu sit testimonials
@@ -89,7 +92,7 @@ export const Testimonials = () => {
         width={900}
         className='pointer-events-none invisible absolute -right-20 top-72 scale-y-75 lg:right-0 lg:scale-y-100 xl:visible'
       />
-    </div>
+    </section>
   );
 };
 
