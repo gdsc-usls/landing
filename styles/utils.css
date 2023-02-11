@@ -47,7 +47,6 @@
   pointer-events: none;
   line-height: 1;
   position: relative;
-  font-size: 0.9rem;
 }
 
 .menu-item > div:nth-child(1) span {

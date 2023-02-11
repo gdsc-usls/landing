@@ -1,30 +1,26 @@
 /* eslint-disable no-param-reassign */
-import React, { useEffect, useState } from 'react';
+import React, { SetStateAction, useEffect, useState } from 'react';
 
 export const Navbar = () => {
-  // const navText = ['About Us', 'Projects', 'Events', 'Contact Us', 'Join Us!'];
-
-  useEffect(() => {
-    const menuItems = [...(document.querySelectorAll('.menu-item') as any)];
-    menuItems.forEach((item: any) => {
-      const word = item.children[0].innerText.split('');
-      item.children[0].innerHTML = '';
-      word.forEach((letter: string, idx: number) => {
-        item.children[0].innerHTML += `<span style="--index: ${idx};">${letter}</span>`;
-      });
-
-      const cloneDiv = item.children[0].cloneNode(true);
-      cloneDiv.style.position = 'absolute';
-      cloneDiv.style.left = '0';
-      cloneDiv.style.top = '0';
-      item.appendChild(cloneDiv);
-    });
-  }, []);
-
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className='fixed left-0 right-0 z-40 m-auto mt-10 flex max-w-screen-2xl justify-between px-7 text-white mix-blend-difference md:px-14 lg:items-center'>
+    <nav>
+      <NavBtns isOpen={isOpen} setIsOpen={setIsOpen} />
+      {isOpen && <Menu />}
+    </nav>
+  );
+};
+
+const NavBtns = ({
+  setIsOpen,
+  isOpen,
+}: {
+  setIsOpen: React.Dispatch<SetStateAction<boolean>>;
+  isOpen: boolean;
+}) => {
+  return (
+    <div className='fixed left-0 right-0 z-40 m-auto mt-10 flex max-w-screen-2xl justify-between px-7 text-white mix-blend-difference md:px-14 lg:items-center'>
       <span className='logo font-merchant-expanded text-xl opacity-0'>
         GDSC USLS
       </span>
@@ -49,21 +45,45 @@ export const Navbar = () => {
           }`}
         />
       </button>
-      {/* <div className='menu flex flex-col justify-center space-y-1 lg:flex-row lg:space-y-0  lg:space-x-10'>
+    </div>
+  );
+};
+
+const Menu = () => {
+  const navText = ['About Us', 'Projects', 'Events', 'Contact', 'Join Us!'];
+
+  useEffect(() => {
+    const menuItems = [...(document.querySelectorAll('.menu-item') as any)];
+    menuItems.forEach((item: any) => {
+      const word = item.children[0].innerText.split('');
+      item.children[0].innerHTML = '';
+      word.forEach((letter: string, idx: number) => {
+        item.children[0].innerHTML += `<span style="--index: ${idx};">${letter}</span>`;
+      });
+
+      const cloneDiv = item.children[0].cloneNode(true);
+      cloneDiv.style.position = 'absolute';
+      cloneDiv.style.left = '0';
+      cloneDiv.style.top = '0';
+      item.appendChild(cloneDiv);
+    });
+  }, []);
+
+  return (
+    <div className='menu fixed top-0 left-0 grid h-screen w-screen place-items-center justify-center space-y-1 bg-black text-white'>
+      <div className='flex flex-col items-center gap-5'>
         {navText.map((text) => (
           <a
             key={text}
             href={`#${text}`}
-            className='menu-item p-nav font-montserrat text-xs uppercase opacity-0'
+            className='menu-item font-merchant-thin-condensed text-6xl uppercase text-white'
           >
             <div className='flex'>
-              <span className='menu-item-text uppercase tracking-wider'>
-                {text}
-              </span>
+              <span className='menu-item-text'>{text}</span>
             </div>
           </a>
         ))}
-      </div> */}
-    </nav>
+      </div>
+    </div>
   );
 };
