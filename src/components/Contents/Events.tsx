@@ -26,7 +26,7 @@ export const Events = () => {
   ];
 
   return (
-    <div className='contain relative pb-20'>
+    <div id='events' className='contain relative pb-20'>
       <ul id='events'>
         {events.map((event) => (
           <li

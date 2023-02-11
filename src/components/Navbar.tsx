@@ -1,5 +1,7 @@
 /* eslint-disable no-param-reassign */
 import React, { SetStateAction, useEffect, useState } from 'react';
+import { gsap } from 'gsap';
+import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -7,7 +9,7 @@ export const Navbar = () => {
   return (
     <nav>
       <NavBtns isOpen={isOpen} setIsOpen={setIsOpen} />
-      {isOpen && <Menu />}
+      {isOpen && <Menu setIsOpen={setIsOpen} />}
     </nav>
   );
 };
@@ -49,8 +51,12 @@ const NavBtns = ({
   );
 };
 
-const Menu = () => {
-  const navText = ['About Us', 'Projects', 'Events', 'Contact', 'Join Us!'];
+const Menu = ({
+  setIsOpen,
+}: {
+  setIsOpen: React.Dispatch<SetStateAction<boolean>>;
+}) => {
+  const navText = ['about', 'projects', 'events', 'contact'];
 
   useEffect(() => {
     const menuItems = [...(document.querySelectorAll('.menu-item') as any)];
@@ -69,6 +75,16 @@ const Menu = () => {
     });
   }, []);
 
+  gsap.registerPlugin(ScrollToPlugin);
+
+  const scrollToSection = (scrollElement: string) => {
+    gsap.to(window, {
+      duration: 0.7,
+      scrollTo: { y: `#${scrollElement}` },
+      ease: 'power2.easeOut',
+    });
+  };
+
   return (
     <div className='menu fixed top-0 left-0 grid h-screen w-screen place-items-center justify-center space-y-1 bg-black text-white'>
       <div className='flex flex-col items-center gap-5'>
@@ -77,6 +93,10 @@ const Menu = () => {
             key={text}
             href={`#${text}`}
             className='menu-item font-merchant-thin-condensed text-6xl uppercase text-white'
+            onClick={() => {
+              setIsOpen(false);
+              scrollToSection(text);
+            }}
           >
             <div className='flex'>
               <span className='menu-item-text'>{text}</span>
