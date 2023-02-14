@@ -4,7 +4,7 @@ export * from './Footer';
 export * from './Content';
 export * from './Hero';
 
-export * from './Contents/About';
-export * from './Contents/Events';
-export * from './Contents/Partners';
-export * from './Contents/Testimonials';
+export * from './contents/About';
+export * from './contents/Events';
+export * from './contents/Partners';
+export * from './contents/Testimonials';
