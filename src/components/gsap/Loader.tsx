@@ -52,7 +52,7 @@ export const Loader = () => {
         '-=60%'
       )
       .to(
-        '.gdsc-color.bg-green-600',
+        '.gdsc-color.bg-green-700',
         {
           duration: 0.5,
           clipPath: 'polygon(0% 0%, 100% 0, 100% 0%, 0% 0%)',
@@ -61,7 +61,7 @@ export const Loader = () => {
         '-=70%'
       )
       .to(
-        '.gdsc-color.bg-blue-600',
+        '.gdsc-color.bg-blue-700',
         {
           duration: 0.6,
           clipPath: 'polygon(0% 0%, 100% 0, 100% 0%, 0% 0%)',
@@ -70,7 +70,7 @@ export const Loader = () => {
         '-=80%'
       )
       .to(
-        '.gdsc-color.bg-red-600',
+        '.gdsc-color.bg-red-700',
         {
           duration: 0.4,
           clipPath: 'polygon(0% 0%, 100% 0, 100% 0%, 0% 0%)',
@@ -90,7 +90,7 @@ export const Loader = () => {
         '>'
       )
       .to(
-        '.p-nav, .logo',
+        '.menu-burger, .logo',
         {
           duration: 0.5,
           opacity: 1,
@@ -131,9 +131,9 @@ export const Loader = () => {
   }, []);
 
   const divColors = [
-    'bg-red-600',
-    'bg-blue-600',
-    'bg-green-600',
+    'bg-red-700',
+    'bg-blue-700',
+    'bg-green-700',
     'bg-yellow-600',
     'bg-black',
   ];

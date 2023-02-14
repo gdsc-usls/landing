@@ -29,7 +29,7 @@ const NavBtns = ({
 
       <button
         type='button'
-        className='group flex w-8 cursor-pointer flex-col items-center justify-center space-y-1 [&>span]:block [&>span]:h-[1.5px] [&>span]:w-full [&>span]:transform [&>span]:bg-white [&>span]:transition [&>span]:duration-300'
+        className='menu-burger group flex w-8 cursor-pointer flex-col items-center justify-center space-y-1 opacity-0 [&>span]:block [&>span]:h-[1.5px] [&>span]:w-full [&>span]:transform [&>span]:bg-white [&>span]:transition [&>span]:duration-300'
         onClick={() => setIsOpen(!isOpen)}
       >
         <span
