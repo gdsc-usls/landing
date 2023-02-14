@@ -12,7 +12,7 @@ export const Loader = () => {
       ease: 'power3.inOut',
     });
 
-    tl.to('.text-load', {
+    tl.to('.text-load p', {
       duration: 2,
       opacity: 1,
       stagger: 0.3,
@@ -26,12 +26,57 @@ export const Loader = () => {
         '-=0.9'
       )
       .to(
-        '#gdsc-logo,.text-load',
+        '#gdsc-logo, .text-load p',
         {
           duration: 1,
           opacity: 0,
         },
         '+=0.7'
+      )
+      .to(
+        '.gdsc-color.bg-black',
+        {
+          duration: 0.5,
+          clipPath: 'polygon(0% 0%, 100% 0, 100% 0%, 0% 0%)',
+          ease: 'power2.easeInOut',
+        },
+        '-=50%'
+      )
+      .to(
+        '.gdsc-color.bg-yellow-600',
+        {
+          duration: 0.5,
+          clipPath: 'polygon(0% 0%, 100% 0, 100% 0%, 0% 0%)',
+          ease: 'power2.easeInOut',
+        },
+        '-=60%'
+      )
+      .to(
+        '.gdsc-color.bg-green-600',
+        {
+          duration: 0.5,
+          clipPath: 'polygon(0% 0%, 100% 0, 100% 0%, 0% 0%)',
+          ease: 'power2.easeInOut',
+        },
+        '-=70%'
+      )
+      .to(
+        '.gdsc-color.bg-blue-600',
+        {
+          duration: 0.6,
+          clipPath: 'polygon(0% 0%, 100% 0, 100% 0%, 0% 0%)',
+          ease: 'power2.easeInOut',
+        },
+        '-=80%'
+      )
+      .to(
+        '.gdsc-color.bg-red-600',
+        {
+          duration: 0.4,
+          clipPath: 'polygon(0% 0%, 100% 0, 100% 0%, 0% 0%)',
+          ease: 'power2.easeInOut',
+        },
+        '-=90%'
       )
       .to('#loader-bg', {
         duration: 0.8,
@@ -85,13 +130,21 @@ export const Loader = () => {
     }, 0);
   }, []);
 
+  const divColors = [
+    'bg-red-600',
+    'bg-blue-600',
+    'bg-green-600',
+    'bg-yellow-600',
+    'bg-black',
+  ];
+
   return (
     <>
       (
       {!unmount && (
         <div
           id='loader-bg'
-          className='absolute top-0 left-0 z-50 grid h-screen w-screen place-items-center bg-black'
+          className='absolute top-0 left-0 z-50 grid h-screen w-screen place-items-center '
         >
           <div>
             <Image
@@ -100,18 +153,24 @@ export const Loader = () => {
               alt='GDSC Logo'
               height={100}
               width={100}
-              className='mx-auto mb-5 scale-75 opacity-0 md:scale-100'
+              className='z-10 mx-auto mb-5 scale-75 opacity-0 md:scale-100'
               id='gdsc-logo'
             />
-            <div className='flex gap-4 font-montserrat text-lg text-white'>
-              <p className='text-load opacity-0'>Connect,</p>
-              <p className='text-load opacity-0'>Learn,</p>
-              <p className='text-load opacity-0'>Grow</p>
+            <div className='text-load z-10 flex gap-4 font-montserrat text-lg text-white [&>p]:opacity-0'>
+              <p>Connect,</p>
+              <p>Learn,</p>
+              <p>Grow</p>
             </div>
           </div>
         </div>
       )}
       )
+      {divColors.map((color) => (
+        <div
+          key={color}
+          className={`${color} gdsc-color absolute top-0  left-0 z-[9] h-screen w-screen [clipPath:polygon(0%_0%,_100%_0%,_100%_100%,_0%_100%)]`}
+        />
+      ))}
     </>
   );
 };
