@@ -42,15 +42,11 @@ export const Loader = () => {
         },
         '-=50%'
       )
-      .to(
-        '.gdsc-color.bg-yellow-600',
-        {
-          duration: 0.5,
-          clipPath: 'polygon(0% 0%, 100% 0, 100% 0%, 0% 0%)',
-          ease: 'power2.easeInOut',
-        },
-        '-=60%'
-      )
+      .to('.gdsc-color.bg-yellow-600', {
+        duration: 0.5,
+        clipPath: 'polygon(0% 0%, 100% 0, 100% 0%, 0% 0%)',
+        ease: 'power2.easeInOut',
+      })
       .to(
         '.gdsc-color.bg-green-700',
         {
@@ -142,35 +138,37 @@ export const Loader = () => {
     <>
       (
       {!unmount && (
-        <div
-          id='loader-bg'
-          className='absolute top-0 left-0 z-50 grid h-screen w-screen place-items-center '
-        >
-          <div>
-            <Image
-              priority
-              src='/images/icons/gdsc-logo.svg'
-              alt='GDSC Logo'
-              height={100}
-              width={100}
-              className='z-10 mx-auto mb-5 scale-75 opacity-0 md:scale-100'
-              id='gdsc-logo'
-            />
-            <div className='text-load z-10 flex gap-4 font-montserrat text-lg text-white [&>p]:opacity-0'>
-              <p>Connect,</p>
-              <p>Learn,</p>
-              <p>Grow</p>
+        <>
+          <div
+            id='loader-bg'
+            className='absolute top-0 left-0 z-50 grid h-screen w-screen place-items-center '
+          >
+            <div>
+              <Image
+                priority
+                src='/images/icons/gdsc-logo.svg'
+                alt='GDSC Logo'
+                height={100}
+                width={100}
+                className='z-10 mx-auto mb-5 scale-75 opacity-0 md:scale-100'
+                id='gdsc-logo'
+              />
+              <div className='text-load z-10 flex gap-4 font-montserrat text-lg text-white [&>p]:opacity-0'>
+                <p>Connect,</p>
+                <p>Learn,</p>
+                <p>Grow</p>
+              </div>
             </div>
           </div>
-        </div>
+          {divColors.map((color) => (
+            <div
+              key={color}
+              className={`${color} gdsc-color absolute top-0  left-0 z-[9] h-screen w-screen [clipPath:polygon(0%_0%,_100%_0%,_100%_100%,_0%_100%)]`}
+            />
+          ))}
+        </>
       )}
       )
-      {divColors.map((color) => (
-        <div
-          key={color}
-          className={`${color} gdsc-color absolute top-0  left-0 z-[9] h-screen w-screen [clipPath:polygon(0%_0%,_100%_0%,_100%_100%,_0%_100%)]`}
-        />
-      ))}
     </>
   );
 };

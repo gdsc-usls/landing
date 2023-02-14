@@ -62,11 +62,6 @@ const HandScrollAnimation = ({ children }: { children: React.ReactNode }) => {
         trigger: '#about-gdsc-paragraph',
       },
       {
-        trigger: '#usls-title-contain',
-        target: '#usls-title',
-        start: 'top 75%',
-      },
-      {
         trigger: '#usls-title',
         target: '#usls-title p',
         start: 'top 75%',
