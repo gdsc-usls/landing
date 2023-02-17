@@ -37,10 +37,10 @@ export const Testimonials = () => {
 
   return (
     <section
-      id='testimonials-section'
+      id='testimonials'
       className='contain relative mb-32 pt-20 text-white md:mb-52'
     >
-      <div className='mb-44 md:mb-64 xl:mb-96'>
+      <div id='testimonials-title' className='mb-44 md:mb-64 xl:mb-96'>
         <h3 className='text-title mb-7 w-[80%] xl:mb-10 2xl:w-[60%]'>
           See what lorempsu sit testimonials
         </h3>
@@ -67,7 +67,11 @@ export const Testimonials = () => {
             {testimonials.map((testimonial, i) => {
               return (
                 (i + 1) % 2 !== 0 && (
-                  <Message key={testimonial.name} {...testimonial} />
+                  <Message
+                    idName={`testimony-${i}`}
+                    key={testimonial.name}
+                    {...testimonial}
+                  />
                 )
               );
             })}
@@ -77,7 +81,11 @@ export const Testimonials = () => {
             {testimonials.map((testimonial, i) => {
               return (
                 (i + 1) % 2 === 0 && (
-                  <Message key={testimonial.name} {...testimonial} />
+                  <Message
+                    idName={`testimony-${i}`}
+                    key={testimonial.name}
+                    {...testimonial}
+                  />
                 )
               );
             })}
@@ -100,11 +108,12 @@ interface MessageProps {
   name: string;
   role: string;
   message: string;
+  idName: string;
 }
 
-const Message = ({ name, role, message }: MessageProps) => {
+const Message = ({ name, role, message, idName }: MessageProps) => {
   return (
-    <div>
+    <div id={idName}>
       <div className='mb-3 flex gap-4'>
         <div className='font-montserrat'>
           <p className='text-sm font-medium md:text-base'>{name}</p>

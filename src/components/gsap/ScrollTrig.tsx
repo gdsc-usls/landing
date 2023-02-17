@@ -34,7 +34,7 @@ const HandScrollAnimation = ({ children }: { children: React.ReactNode }) => {
       },
       {
         scrollTrigger: {
-          // markers: true,
+          markers: true,
           start: start || 'top bottom',
           trigger: trigger as string,
           toggleActions: 'restart none none reset',
@@ -79,11 +79,33 @@ const HandScrollAnimation = ({ children }: { children: React.ReactNode }) => {
         stag: 0.3,
       },
       {
-        trigger: '#events li',
-        start: '-150px bottom',
+        trigger: '#events',
+        target: '#events li',
+        start: '-110px bottom',
         stag: 0.3,
       },
+      {
+        trigger: '#partners-title',
+        target: '#partners-title, #partners-logos .logo',
+        start: '-230px bottom',
+        stag: 0.1,
+      },
+      {
+        trigger: '#testimonials-title',
+        target: '#testimonials-title h3, #testimonials-title p ',
+        start: '20px bottom',
+        stag: 0.1,
+      },
     ];
+
+    // Looping through testimonials for individual scroll trigs
+    for (let i = 0; i < 5; i++) {
+      textsTarget.push({
+        trigger: `#testimony-${i}`,
+        target: `#testimony-${i} p`,
+        stag: 0.1,
+      });
+    }
 
     textsTarget.forEach(({ trigger, target, stag, start }) => {
       scrollTrigText(trigger, target || trigger, stag, start);

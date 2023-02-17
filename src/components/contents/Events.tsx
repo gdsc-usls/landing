@@ -27,7 +27,7 @@ export const Events = () => {
 
   return (
     <div id='events' className='contain relative pb-20'>
-      <ul id='events'>
+      <ul>
         {events.map((event) => (
           <li
             key={event.title}

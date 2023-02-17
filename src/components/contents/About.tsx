@@ -53,7 +53,7 @@ export const About = () => {
           alt='Swirl Glass'
           height={800}
           width={600}
-          className='pointer-events-none -translate-y-20 rotate-12 md:rotate-0  xl:translate-x-40'
+          className='pointer-events-none -translate-y-20 rotate-12 md:rotate-0 xl:translate-x-40'
         />
         <div id='usls-title' className='ml-auto flex flex-col text-right'>
           <p className='font-merchant-semibold leading-[0.7] [fontSize:clamp(5rem,15vw,10rem)]'>
@@ -64,7 +64,7 @@ export const About = () => {
           </p>
         </div>
       </div>
-      <div className='relative'>
+      <div>
         <div id='gdsc-usls-title' className='mx-auto text-white xl:w-3/4'>
           <h3 className='text-title mb-2 md:mb-5 lg:translate-x-6 2xl:-translate-x-20 2xl:text-center'>
             GDSC - USLS
