@@ -7,7 +7,7 @@ export const Hero = () => {
       id='hero-section'
       className='relative m-auto grid h-[60vh] place-items-center md:h-screen'
     >
-      <h1 className='text-mainTitle z-10 flex translate-y-24 flex-col gap-1 md:gap-2'>
+      <h1 className='text-mainTitle z-10 flex translate-y-24 flex-col gap-1 md:gap-2 [&>p]:[clipPath:polygon(0%_100%,_100%_100%,_100%_100%,_0%_100%)]'>
         <p className='h1-anim'>Powered by Intellect,</p>
         <br />
         <p className='h1-anim'>Driven by Values</p>
@@ -41,7 +41,7 @@ export const Hero = () => {
           alt='GDSC Logo Glass'
           height={500}
           width={1200}
-          className='pointer-events-none absolute bottom-0 -right-4 translate-y-1/2 scale-90'
+          className='pointer-events-none absolute bottom-0 -right-4 translate-y-1/2 scale-90 opacity-0'
         />
         <Image
           id='arrow-down'
@@ -50,7 +50,7 @@ export const Hero = () => {
           alt='Arrow Down'
           height={300}
           width={300}
-          className='pointer-events-none absolute -left-[5.5rem] -bottom-5 translate-y-1/2 scale-[0.3] mix-blend-overlay sm:bottom-10 sm:-left-12 sm:scale-[0.5] md:bottom-48 xl:left-0 xl:scale-[0.7] 2xl:left-32 2xl:scale-[.80]'
+          className='pointer-events-none absolute -left-[5.5rem] -bottom-5 translate-y-1/2 scale-[0.3] opacity-0 mix-blend-overlay sm:bottom-10 sm:-left-12 sm:scale-[0.5] md:bottom-48 xl:left-0 xl:scale-[0.7] 2xl:left-32 2xl:scale-[.80]'
         />
       </div>
     </section>

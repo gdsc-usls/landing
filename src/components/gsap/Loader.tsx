@@ -42,11 +42,15 @@ export const Loader = () => {
         },
         '-=50%'
       )
-      .to('.gdsc-color.bg-yellow-600', {
-        duration: 0.5,
-        clipPath: 'polygon(0% 0%, 100% 0, 100% 0%, 0% 0%)',
-        ease: 'power2.easeInOut',
-      })
+      .to(
+        '.gdsc-color.bg-yellow-600',
+        {
+          duration: 0.5,
+          clipPath: 'polygon(0% 0%, 100% 0, 100% 0%, 0% 0%)',
+          ease: 'power2.easeInOut',
+        },
+        '-=60%'
+      )
       .to(
         '.gdsc-color.bg-green-700',
         {
@@ -77,14 +81,8 @@ export const Loader = () => {
       .to('#loader-bg', {
         duration: 0.8,
         opacity: 0,
+        onComplete: () => setUnmount(true),
       })
-      .to(
-        'body',
-        {
-          overflowY: 'auto',
-        },
-        '>'
-      )
       .to(
         '.menu-burger, .logo',
         {
@@ -97,7 +95,6 @@ export const Loader = () => {
       .fromTo(
         '.h1-anim',
         {
-          clipPath: 'polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)',
           y: 20,
         },
         {
@@ -105,9 +102,24 @@ export const Loader = () => {
           duration: 0.8,
           stagger: 0.3,
           y: 0,
-          onComplete: () => setUnmount(true),
         },
-        '<'
+        '-=40%'
+      )
+      .to(
+        '#arrow-down, #gdsc-glass-logo',
+        {
+          duration: 0.5,
+          opacity: 1,
+          stagger: -0.3,
+        },
+        '-=0.5'
+      )
+      .to(
+        'body',
+        {
+          overflowY: 'auto',
+        },
+        '>'
       );
   };
 
@@ -141,7 +153,7 @@ export const Loader = () => {
         <>
           <div
             id='loader-bg'
-            className='absolute top-0 left-0 z-50 grid h-screen w-screen place-items-center '
+            className='fixed top-0 left-0 z-50 grid h-screen w-screen place-items-center '
           >
             <div>
               <Image
