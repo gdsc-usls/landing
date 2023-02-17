@@ -24,19 +24,27 @@ const HandScrollAnimation = ({ children }: { children: React.ReactNode }) => {
   function scrollTrigText(
     trigger: string,
     target: string,
-    start?: string,
-    stag?: number
+    stag?: number,
+    start?: string
   ) {
-    gsap.to(target, {
-      scrollTrigger: {
-        trigger: trigger as string,
-        start: start || 'center 75%',
-        // markers: true,
+    gsap.fromTo(
+      target,
+      {
+        y: 250,
       },
-      opacity: 1,
-      duration: 0.8,
-      stagger: stag,
-    });
+      {
+        scrollTrigger: {
+          // markers: true,
+          start: start || 'top bottom',
+          trigger: trigger as string,
+          toggleActions: 'restart none none reset',
+        },
+        y: 0,
+        duration: 1.5,
+        stagger: stag,
+        ease: 'power4.out',
+      }
+    );
   }
 
   useLayoutEffect(() => {
@@ -57,14 +65,12 @@ const HandScrollAnimation = ({ children }: { children: React.ReactNode }) => {
     const textsTarget = [
       {
         trigger: '#about-gdsc-title',
-      },
-      {
-        trigger: '#about-gdsc-paragraph',
+        target: '#about-gdsc-title h2, #about-gdsc-title p',
+        stag: 0.3,
       },
       {
         trigger: '#usls-title',
         target: '#usls-title p',
-        start: 'top 75%',
         stag: 0.3,
       },
       {
@@ -74,12 +80,13 @@ const HandScrollAnimation = ({ children }: { children: React.ReactNode }) => {
       },
       {
         trigger: '#events li',
-        stag: 0.4,
+        start: '-150px bottom',
+        stag: 0.3,
       },
     ];
 
-    textsTarget.forEach(({ trigger, target, start, stag }) => {
-      scrollTrigText(trigger, target || trigger, start, stag);
+    textsTarget.forEach(({ trigger, target, stag, start }) => {
+      scrollTrigText(trigger, target || trigger, stag, start);
     });
   }, []);
 
