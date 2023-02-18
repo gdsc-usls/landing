@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Image from 'next/image';
 import { gsap } from 'gsap';
-import useLayoutEffect from '../hooks/use-isomorphic-layout-effect';
+import Image from 'next/image';
+import useLayoutEffect from '~/hooks/useIsomorphicLayoutEffect';
 
 export const Loader = () => {
   const [unmount, setUnmount] = useState(false);
