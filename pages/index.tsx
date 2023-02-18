@@ -1,17 +1,23 @@
 import React from 'react';
-import { Hero, Content } from '~/components';
-import { Loader } from '~/components/gsap/Loader';
-import HandScrollAnimation from '~/components/gsap/ScrollTrig';
+import { Hero } from '~/components';
+import { Loader, HandScroll } from '~/components/GSAP';
+import { About, Events, Partners, Testimonials } from '~/components/Contents';
 
 export default function Home() {
   return (
     <>
       <Loader />
       <main>
-        <HandScrollAnimation>
+        <HandScroll>
           <Hero />
-          <Content />
-        </HandScrollAnimation>
+
+          <section className='overflow-x-hidden overflow-y-clip '>
+            <About />
+            <Events />
+            <Partners />
+            <Testimonials />
+          </section>
+        </HandScroll>
       </main>
     </>
   );
