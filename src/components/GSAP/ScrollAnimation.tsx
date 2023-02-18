@@ -3,7 +3,11 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import useLayoutEffect from '~/hooks/useIsomorphicLayoutEffect';
 
-export const HandScroll = ({ children }: { children: React.ReactNode }) => {
+export const ScrollAnimation = ({
+  children,
+}: {
+  children: React.ReactNode;
+}) => {
   gsap.registerPlugin(ScrollTrigger);
 
   // Fn for creating a new scrollTrigger instance
