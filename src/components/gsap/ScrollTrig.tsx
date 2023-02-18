@@ -34,7 +34,7 @@ const HandScrollAnimation = ({ children }: { children: React.ReactNode }) => {
       },
       {
         scrollTrigger: {
-          markers: true,
+          markers: process.env.NODE_ENV === 'development',
           start: start || 'top bottom',
           trigger: trigger as string,
           toggleActions: 'restart none none reset',
