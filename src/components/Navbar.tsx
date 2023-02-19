@@ -26,9 +26,13 @@ export const Navbar = () => {
         ease: 'power2.easeInOut',
         duration: 0.5,
       })
-      .to('body', {
-        overflowY: 'hidden',
-      })
+      .to(
+        'body',
+        {
+          overflowY: 'hidden',
+        },
+        '<'
+      )
       .fromTo(
         '.menu-item',
         {
@@ -43,7 +47,8 @@ export const Navbar = () => {
           duration: 0.7,
           stagger: -0.2,
           ease: 'power4.out',
-        }
+        },
+        '-=0.1'
       );
   };
 
@@ -65,9 +70,13 @@ export const Navbar = () => {
           ease: 'power4.out',
         }
       )
-      .to('body', {
-        overflowY: 'auto',
-      })
+      .to(
+        'body',
+        {
+          overflowY: 'auto',
+        },
+        '<'
+      )
       .to(
         '.menu',
         {
@@ -82,9 +91,9 @@ export const Navbar = () => {
   return (
     <>
       <div className='fixed left-0 right-0 z-40 m-auto mt-10 flex max-w-screen-2xl justify-between px-7 text-white mix-blend-difference md:px-14 lg:items-center'>
-        <span className='logo font-merchant-expanded text-xl opacity-0'>
+        <a href='#' className='logo font-merchant-expanded text-xl opacity-0'>
           GDSC USLS
-        </span>
+        </a>
 
         <button
           type='button'
@@ -110,12 +119,12 @@ export const Navbar = () => {
       {/**
        * MENU COMPONENT
        */}
-      <Menu />
+      <Menu handleMenu={handleMenu} />
     </>
   );
 };
 
-const Menu = () => {
+const Menu = ({ handleMenu }: { handleMenu: () => void }) => {
   const navText = ['about', 'projects', 'events', 'contact'];
 
   useEffect(() => {
@@ -138,9 +147,11 @@ const Menu = () => {
   gsap.registerPlugin(ScrollToPlugin);
 
   const scrollToSection = (scrollElement: string) => {
+    handleMenu();
+
     gsap.to(window, {
       duration: 0.7,
-      scrollTo: { y: `#${scrollElement}` },
+      scrollTo: { y: `#${scrollElement}`, offsetY: 100 },
       ease: 'power2.easeOut',
     });
   };
