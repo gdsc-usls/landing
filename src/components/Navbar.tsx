@@ -26,6 +26,9 @@ export const Navbar = () => {
         ease: 'power2.easeInOut',
         duration: 0.5,
       })
+      .to('body', {
+        overflowY: 'hidden',
+      })
       .fromTo(
         '.menu-item',
         {
@@ -62,6 +65,9 @@ export const Navbar = () => {
           ease: 'power4.out',
         }
       )
+      .to('body', {
+        overflowY: 'auto',
+      })
       .to(
         '.menu',
         {
