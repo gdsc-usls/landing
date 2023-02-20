@@ -36,10 +36,7 @@ export const Testimonials = () => {
   ];
 
   return (
-    <section
-      id='testimonials'
-      className='contain relative mb-32 pt-20 text-white md:mb-52'
-    >
+    <section className='contain relative mb-32 pt-20 text-white md:mb-52'>
       <div id='testimonials-title' className='mb-44 md:mb-64 xl:mb-96'>
         <h3 className='text-title mb-7 w-[80%] xl:mb-10 2xl:w-[60%]'>
           See what lorempsu sit testimonials

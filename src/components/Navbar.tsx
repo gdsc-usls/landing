@@ -125,7 +125,7 @@ export const Navbar = () => {
 };
 
 const Menu = ({ handleMenu }: { handleMenu: () => void }) => {
-  const navText = ['about', 'projects', 'events', 'contact'];
+  const navText = ['home', 'about', 'events', 'contact'];
 
   useEffect(() => {
     const menuItems = [...(document.querySelectorAll('.menu-item') as any)];
@@ -146,12 +146,12 @@ const Menu = ({ handleMenu }: { handleMenu: () => void }) => {
 
   gsap.registerPlugin(ScrollToPlugin);
 
-  const scrollToSection = (scrollElement: string) => {
+  const scrollToSection = (scrollElement: string, offsetY: number) => {
     handleMenu();
 
     gsap.to(window, {
-      duration: 0.7,
-      scrollTo: { y: `#${scrollElement}`, offsetY: 100 },
+      duration: 1,
+      scrollTo: { y: `#${scrollElement}`, offsetY },
       ease: 'power2.easeOut',
     });
   };
@@ -160,18 +160,18 @@ const Menu = ({ handleMenu }: { handleMenu: () => void }) => {
     <div className='menu fixed top-0 left-0 grid h-screen w-screen place-items-center justify-center space-y-1 bg-black text-white [clipPath:polygon(0%_0%,_100%_0%,_100%_0%,_0%_0%)]'>
       <div className='flex flex-col items-center gap-5'>
         {navText.map((text) => (
-          <a
+          <button
+            type='button'
             key={text}
-            href={`#${text}`}
             className='menu-item font-merchant-thin-condensed text-6xl uppercase text-white opacity-0'
             onClick={() => {
-              scrollToSection(text);
+              scrollToSection(text, text === 'about' ? -150 : 100);
             }}
           >
             <div className='flex'>
               <span className='menu-item-text'>{text}</span>
             </div>
-          </a>
+          </button>
         ))}
       </div>
     </div>
