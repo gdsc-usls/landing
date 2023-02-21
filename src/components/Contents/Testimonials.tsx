@@ -36,12 +36,9 @@ export const Testimonials = () => {
   ];
 
   return (
-    <section
-      id='testimonials'
-      className='contain relative mb-32 pt-20 text-white md:mb-52'
-    >
-      <div id='testimonials-title' className='mb-44 md:mb-64 xl:mb-96'>
-        <h3 className='text-title mb-7 w-[80%] xl:mb-10 2xl:w-[60%]'>
+    <section className='contain relative mb-32 pt-20 text-white md:mb-52'>
+      <div id='testimonials-title' className='mb-20'>
+        <h3 className='text-title w-[80%] xl:mb-10 2xl:w-[60%]'>
           See what lorempsu sit testimonials
         </h3>
         <div className='grid-cols-2 border-t-[1px] border-t-white pt-7 xl:grid xl:pt-10'>
@@ -52,6 +49,15 @@ export const Testimonials = () => {
             origins, as well as a random Lipsum generator.
           </p>
         </div>
+        <Image
+          id='arrow-down-1'
+          priority
+          src='/images/elements/arrowDown.png'
+          alt='Arrow Down'
+          height={300}
+          width={300}
+          className='pointer-events-none scale-[0.5] opacity-20 xl:scale-[0.7] 2xl:scale-[.80]'
+        />
       </div>
 
       <div className='relative flex gap-6 sm:gap-10 md:gap-20 lg:gap-28 2xl:gap-60'>

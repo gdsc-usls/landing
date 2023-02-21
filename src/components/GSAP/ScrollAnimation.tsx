@@ -58,12 +58,21 @@ export const ScrollAnimation = ({
       // })
       .to('#arrow-down', {
         scrollTrigger: {
-          trigger: '#hero-section',
+          trigger: '#home',
           start: 'bottom bottom',
           scrub: 0.7,
         },
         y: -60,
       });
+
+    gsap.to('#arrow-down-1', {
+      scrollTrigger: {
+        trigger: '#testimonials-title',
+        start: 'bottom bottom',
+        scrub: 0.7,
+      },
+      y: -70,
+    });
 
     // Responsible for onScroll (intersection) animation
     const textsTarget = [

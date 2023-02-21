@@ -37,7 +37,7 @@ export const Loader = () => {
         '.gdsc-color.bg-black',
         {
           duration: 0.5,
-          clipPath: 'polygon(0% 0%, 100% 0, 100% 0%, 0% 0%)',
+          clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
           ease: 'power2.easeInOut',
         },
         '-=50%'
@@ -46,7 +46,7 @@ export const Loader = () => {
         '.gdsc-color.bg-yellow-600',
         {
           duration: 0.5,
-          clipPath: 'polygon(0% 0%, 100% 0, 100% 0%, 0% 0%)',
+          clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
           ease: 'power2.easeInOut',
         },
         '-=60%'
@@ -55,7 +55,7 @@ export const Loader = () => {
         '.gdsc-color.bg-green-700',
         {
           duration: 0.5,
-          clipPath: 'polygon(0% 0%, 100% 0, 100% 0%, 0% 0%)',
+          clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
           ease: 'power2.easeInOut',
         },
         '-=70%'
@@ -64,7 +64,7 @@ export const Loader = () => {
         '.gdsc-color.bg-blue-700',
         {
           duration: 0.6,
-          clipPath: 'polygon(0% 0%, 100% 0, 100% 0%, 0% 0%)',
+          clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
           ease: 'power2.easeInOut',
         },
         '-=80%'
@@ -73,7 +73,7 @@ export const Loader = () => {
         '.gdsc-color.bg-red-700',
         {
           duration: 0.4,
-          clipPath: 'polygon(0% 0%, 100% 0, 100% 0%, 0% 0%)',
+          clipPath: 'polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)',
           ease: 'power2.easeInOut',
         },
         '-=90%'
@@ -127,7 +127,7 @@ export const Loader = () => {
     gsap.timeline().add(loaderTl);
   }, []);
 
-  // // scroll to top before page reload
+  // scroll to top before page reload
   useEffect(() => {
     setTimeout(() => {
       window.scrollTo({

@@ -4,12 +4,11 @@ import Image from 'next/image';
 export const Hero = () => {
   return (
     <section
-      id='hero-section'
+      id='home'
       className='relative m-auto grid h-[60vh] place-items-center md:h-screen'
     >
-      <h1 className='text-mainTitle z-10 flex translate-y-24 flex-col gap-1 md:gap-2 [&>p]:[clipPath:polygon(0%_100%,_100%_100%,_100%_100%,_0%_100%)]'>
+      <h1 className='text-mainTitle z-10 flex translate-y-24 flex-col gap-3 md:gap-5 xl:gap-6 [&>*]:[clipPath:polygon(0%_100%,_100%_100%,_100%_100%,_0%_100%)]'>
         <p className='h1-anim'>Powered by Intellect,</p>
-        <br />
         <p className='h1-anim'>Driven by Values</p>
       </h1>
       <Image
