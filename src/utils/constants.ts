@@ -1,6 +1,7 @@
 export const markdown = {
   solcha: `
-  # GDSC Solutions Challenge
+  # GDSC Solutions Challenge 2023
+
   ***
 
   ## The hardest part is getting started.
@@ -85,6 +86,32 @@ To read the full list of frequently asked questions head over to the FAQ page at
 
 *If you have a question that is not answered below, please reach out to your GDSC Lead.* 
 
+***
+
+# What past participants said
+
+### Android
+“Developing an Android app from Android Studio is so easy and enjoyable. Android Studio's new features, including Flash Run and ConstraintLayout, help us to build our app faster, easier, and better. We develop our app with the aid of Google's CodeLabs, which are so useful and easy to follow.”
+
+### Flutter
+
+“Flutter helped us to become more productive. It helped me to build these apps with less code, and less worrying about the basic features. The Hot Reload features saved a lot of my time.”
+
+### Google Cloud Platform
+“GCP allows the apps to be 100% deployable on the cloud. With that vast features available and readily available integration of machine learning online, GCP allows us to be ready for every stage of deployment, ultimately worldwide deployment at multiple regions in multiple countries.”
+
+### Google Cloud Platform
+“GCP allows the apps to be 100% deployable on the cloud. With that vast features available and readily available integration of machine learning online, GCP allows us to be ready for every stage of deployment, ultimately worldwide deployment at multiple regions in multiple countries.”
+
+### Firebase
+“I loved Firebase more because of its easiness and scalability and the approaches that we can do. It's smooth, fast and amazing. It made me say goodbye to SQL and move towards the NOSQL database as it's more robust, easy to use and powerful.”
+
+### TensorFlow
+“TensorFlow is one of the open source tools we use to perform supervised learning for detection. TensorFlow is a really easy tool to use to get started. We chose to use TensorFlow because it is easy to build neural networks using it. It has a comprehensive, flexible ecosystem of tools, libraries and community resources that lets researchers push the state-of-the-art in ML and helps developers to easily build and deploy ML powered applications.”
+
+***
+
+![SOLCHA End](/images/solcha/solcha-end.jpg)
 
   `,
 };
