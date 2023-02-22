@@ -3,15 +3,18 @@ import { gsap } from 'gsap';
 import Image from 'next/image';
 import { markdown } from '~/utils/constants';
 import { Markdown } from '~/components';
+import useLayoutEffect from '~/hooks/useIsomorphicLayoutEffect';
 import type { NextPage } from 'next';
 
 const SolchaInfo: NextPage = () => {
-  gsap.to('body', {
-    overflowY: 'scroll',
-  });
+  useLayoutEffect(() => {
+    gsap.to('body', {
+      overflowY: 'scroll',
+    });
+  }, []);
 
   return (
-    <section className='space-y-12 p-40'>
+    <section className='py-40 px-60'>
       <Image
         priority
         src='/images/elements/gridsDotted.png'
