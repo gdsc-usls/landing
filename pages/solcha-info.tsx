@@ -14,7 +14,7 @@ const SolchaInfo: NextPage = () => {
   }, []);
 
   return (
-    <section className='py-40 px-60'>
+    <section className='py-40 px-7 sm:px-10 md:px-20  lg:px-44 xl:px-60'>
       <Image
         priority
         src='/images/elements/gridsDotted.png'
