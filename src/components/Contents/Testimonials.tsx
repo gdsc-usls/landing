@@ -69,7 +69,7 @@ export const Testimonials = () => {
         </div>
 
         <div className='grid grid-cols-1 gap-40 md:gap-52 md:border-x-[1px] md:border-x-gray-500 md:px-12 lg:gap-60 xl:grid-cols-2 xl:gap-0 xl:border-x-0'>
-          <div className='testimony'>
+          <div className='testimony pb-96'>
             {testimonials.map((testimonial, i) => {
               return (
                 (i + 1) % 2 !== 0 && (
