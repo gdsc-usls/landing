@@ -11,6 +11,12 @@ const SolchaInfo: NextPage = () => {
     gsap.to('body', {
       overflowY: 'scroll',
     });
+
+    gsap.to('.menu-burger, .logo', {
+      duration: 0.5,
+      opacity: 1,
+      stagger: 0.2,
+    });
   }, []);
 
   return (

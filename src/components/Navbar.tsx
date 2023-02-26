@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
+import { useRouter } from 'next/router';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -125,7 +126,30 @@ export const Navbar = () => {
 };
 
 const Menu = ({ handleMenu }: { handleMenu: () => void }) => {
-  const navText = ['home', 'about', 'events', 'contact'];
+  const router = useRouter();
+
+  const navText = [
+    {
+      text: 'home',
+      href: '/',
+      behaviour: 'link',
+    },
+    {
+      text: 'solcha',
+      href: '/solcha-info',
+      behaviour: 'link',
+    },
+    {
+      text: 'events',
+      href: 'events',
+      behaviour: 'scroll',
+    },
+    {
+      text: 'contact',
+      href: 'contact',
+      behaviour: 'scroll',
+    },
+  ];
 
   useEffect(() => {
     const menuItems = [...(document.querySelectorAll('.menu-item') as any)];
@@ -162,14 +186,19 @@ const Menu = ({ handleMenu }: { handleMenu: () => void }) => {
         {navText.map((text) => (
           <button
             type='button'
-            key={text}
+            key={text.text}
             className='menu-item font-merchant-thin-condensed text-6xl uppercase text-white opacity-0'
             onClick={() => {
-              scrollToSection(text, text === 'about' ? -150 : 100);
+              if (text.behaviour === 'link') {
+                handleMenu();
+                router.push(text.href);
+              } else {
+                scrollToSection(text.href, text.href === 'about' ? -150 : 100);
+              }
             }}
           >
             <div className='flex'>
-              <span className='menu-item-text'>{text}</span>
+              <span className='menu-item-text'>{text.text}</span>
             </div>
           </button>
         ))}

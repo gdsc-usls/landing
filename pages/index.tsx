@@ -11,12 +11,12 @@ export default function Home() {
         <ScrollAnimation>
           <Hero />
 
-          <section className='overflow-x-hidden overflow-y-clip '>
+          <div className='overflow-x-hidden overflow-y-clip '>
             <About />
             <Events />
             <Partners />
             <Testimonials />
-          </section>
+          </div>
         </ScrollAnimation>
       </main>
     </>
