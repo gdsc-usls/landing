@@ -3,14 +3,14 @@ import Image from 'next/image';
 
 export const Contact = () => {
   return (
-    <section className='contain relative flex h-screen flex-col items-end text-white'>
+    <section className='contain relative flex min-h-screen  flex-col items-end pb-20 text-white'>
       <Image
         priority
         src='/images/elements/swirlGlass.png'
         alt='Swirl Glass'
         height={800}
         width={600}
-        className='pointer-events-none absolute -top-3/4 rotate-12 -scale-x-100 md:rotate-0'
+        className='pointer-events-none -top-3/4 rotate-0 -scale-x-100 md:rotate-0 lg:rotate-12 xl:absolute'
       />
       <Image
         priority
@@ -18,16 +18,16 @@ export const Contact = () => {
         alt='Gradient Red'
         height={1000}
         width={1000}
-        className='pointer-events-none absolute -top-96 left-0 z-[-1] mr-40 scale-x-[-1]'
+        className='pointer-events-none absolute top-0 left-0  z-[-1] mr-40 scale-x-[-1] lg:-top-96'
       />
-      <div className='w-[60%]'>
-        <h3 className='mb-20 font-merchant-expanded text-6xl'>
+      <div className='mt-10 w-full md:w-3/4 lg:mt-0 xl:w-[60%]'>
+        <h3 className='mb-10 font-merchant-expanded leading-8 [fontSize:clamp(1.6rem,4vw,3.8rem)]  sm:leading-tight md:mb-20 lg:mt-10 lg:leading-none'>
           Ready to uplift lorem ipsum the qick brwn fox?
         </h3>
         <form className=' font-montserrat' action='mailto: gdsc@usls.edu.ph'>
           <div className='mb-4 flex gap-4'>
             <label
-              className='flex w-full items-center border-b-[1px] border-b-gray-500 text-sm uppercase'
+              className='flex w-full items-center border-b-[1px] border-b-gray-500 text-xs uppercase md:text-sm'
               htmlFor='email'
             >
               email
@@ -40,7 +40,7 @@ export const Contact = () => {
             </label>
 
             <label
-              className='flex w-full items-center border-b-[1px] border-b-gray-500 text-sm uppercase'
+              className='flex w-full items-center border-b-[1px] border-b-gray-500 text-xs uppercase md:text-sm'
               htmlFor='subject'
             >
               subject
@@ -53,11 +53,11 @@ export const Contact = () => {
             </label>
           </div>
           <div className='border-b-[1px] border-b-gray-500'>
-            <label className='text-sm uppercase' htmlFor='message'>
+            <label className='text-xs uppercase md:text-sm' htmlFor='message'>
               Message:
               <div className='relative'>
                 <textarea
-                  className='h-56 w-full resize-none appearance-none bg-transparent text-gray-400'
+                  className='h-36 w-full resize-none appearance-none bg-transparent text-gray-400 outline-none lg:h-56'
                   id='message'
                   required
                 />
