@@ -21,10 +21,17 @@ export const Contact = () => {
         className='pointer-events-none absolute top-0 left-0  z-[-1] mr-40 scale-x-[-1] lg:-top-96'
       />
       <div className='mt-10 w-full md:w-3/4 lg:mt-0 xl:w-[60%]'>
-        <h3 className='mb-10 font-merchant-expanded leading-8 [fontSize:clamp(1.6rem,4vw,3.8rem)]  sm:leading-tight md:mb-20 lg:mt-10 lg:leading-none'>
+        <h3
+          id='contact-title'
+          className='mb-10 font-merchant-expanded leading-8 [fontSize:clamp(1.6rem,4vw,3.8rem)]  sm:leading-tight md:mb-20 lg:mt-10 lg:leading-none'
+        >
           Ready to uplift lorem ipsum the qick brwn fox?
         </h3>
-        <form className=' font-montserrat' action='mailto: gdsc@usls.edu.ph'>
+        <form
+          id='contact-form'
+          className='font-montserrat'
+          action='mailto: gdsc@usls.edu.ph'
+        >
           <div className='mb-4 flex gap-4'>
             <label
               className='flex w-full items-center border-b-[1px] border-b-gray-500 text-xs uppercase md:text-sm'
