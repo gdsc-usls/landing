@@ -83,7 +83,7 @@ export const Testimonials = () => {
             })}
           </div>
 
-          <div className='testimony justify-center md:pb-20'>
+          <div className='testimony justify-center xl:pb-96'>
             {testimonials.map((testimonial, i) => {
               return (
                 (i + 1) % 2 === 0 && (

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Navbar } from '.';
+import { Contact } from './Contents';
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -10,6 +11,7 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
       </main>
 
       {/* <Footer /> */}
+      <Contact />
     </>
   );
 };
