@@ -36,7 +36,7 @@ export const Testimonials = () => {
   ];
 
   return (
-    <section className='contain relative mb-32 pt-20 text-white md:mb-52'>
+    <section className='contain relative mb-20 pt-20  text-white  md:mb-0 xl:mb-56'>
       <div id='testimonials-title' className='mb-20'>
         <h3 className='text-title w-[80%] xl:mb-10 2xl:w-[60%]'>
           See what lorempsu sit testimonials
@@ -69,7 +69,7 @@ export const Testimonials = () => {
         </div>
 
         <div className='grid grid-cols-1 gap-40 md:gap-52 md:border-x-[1px] md:border-x-gray-500 md:px-12 lg:gap-60 xl:grid-cols-2 xl:gap-0 xl:border-x-0'>
-          <div className='testimony'>
+          <div className='testimony xl:pb-96'>
             {testimonials.map((testimonial, i) => {
               return (
                 (i + 1) % 2 !== 0 && (
@@ -83,7 +83,7 @@ export const Testimonials = () => {
             })}
           </div>
 
-          <div className='testimony justify-center'>
+          <div className='testimony justify-center md:pb-20'>
             {testimonials.map((testimonial, i) => {
               return (
                 (i + 1) % 2 === 0 && (

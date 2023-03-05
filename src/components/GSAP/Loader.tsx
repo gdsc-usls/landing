@@ -93,35 +93,6 @@ export const Loader = () => {
             stagger: 0.2,
           },
           '-=0.8'
-        )
-        .fromTo(
-          '.h1-anim',
-          {
-            y: 20,
-          },
-          {
-            clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
-            duration: 0.8,
-            stagger: 0.3,
-            y: 0,
-          },
-          '-=40%'
-        )
-        .to(
-          '#arrow-down, #gdsc-glass-logo',
-          {
-            duration: 0.5,
-            opacity: 1,
-            stagger: -0.3,
-          },
-          '-=0.5'
-        )
-        .to(
-          'body',
-          {
-            overflowY: 'auto',
-          },
-          '>'
         );
     } else {
       tl.fromTo(
@@ -131,11 +102,11 @@ export const Loader = () => {
         },
         {
           clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
-          duration: 0.6,
+          duration: 0.8,
           stagger: 0.3,
           y: 0,
         },
-        '-0.7'
+        '-1.7'
       )
         .to(
           '#arrow-down, #gdsc-glass-logo',
@@ -144,7 +115,7 @@ export const Loader = () => {
             opacity: 1,
             stagger: -0.3,
           },
-          '-=0.5'
+          '-=0.7s'
         )
         .to(
           'body',

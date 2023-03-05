@@ -109,6 +109,12 @@ export const ScrollAnimation = ({
         start: '20px bottom',
         stag: 0.1,
       },
+      {
+        trigger: '#contact-title',
+        target: '#contact-title, #contact-form ',
+        start: '20px bottom',
+        stag: 0.1,
+      },
     ];
 
     // Looping through testimonials for individual scroll trigs
