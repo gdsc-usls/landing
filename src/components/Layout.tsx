@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar } from '.';
+import { Footer, Navbar } from '.';
 import { Contact } from './Contents';
 
 export const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -10,8 +10,8 @@ export const Layout = ({ children }: { children: React.ReactNode }) => {
         {children}
       </main>
 
-      {/* <Footer /> */}
       <Contact />
+      <Footer />
     </>
   );
 };

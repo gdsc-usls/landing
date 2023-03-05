@@ -3,14 +3,14 @@ import Image from 'next/image';
 
 export const Contact = () => {
   return (
-    <section className='contain relative flex min-h-screen  flex-col items-end pb-20 text-white'>
+    <section className='contain relative flex flex-col items-end text-white'>
       <Image
         priority
         src='/images/elements/swirlGlass.png'
         alt='Swirl Glass'
         height={800}
         width={600}
-        className='pointer-events-none -top-3/4 rotate-0 -scale-x-100 md:rotate-0 lg:rotate-12 xl:absolute'
+        className='pointer-events-none -top-full rotate-0 -scale-x-100 md:rotate-0 lg:rotate-12 xl:absolute'
       />
       <Image
         priority
@@ -23,7 +23,7 @@ export const Contact = () => {
       <div className='mt-10 w-full md:w-3/4 lg:mt-0 xl:w-[60%]'>
         <h3
           id='contact-title'
-          className='mb-10 font-merchant-expanded leading-8 [fontSize:clamp(1.6rem,4vw,3.8rem)]  sm:leading-tight md:mb-20 lg:mt-10 lg:leading-none'
+          className='mb-10 font-merchant-expanded leading-8 [fontSize:clamp(1.6rem,4vw,3.8rem)]  sm:leading-tight md:mb-20 lg:mt-16 lg:leading-none'
         >
           Ready to uplift lorem ipsum the qick brwn fox?
         </h3>
