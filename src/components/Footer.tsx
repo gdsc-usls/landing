@@ -22,7 +22,7 @@ export const Footer = () => {
       title: 'Projects',
       item1: {
         title: 'ID Generator',
-        link: 'https://gdsc-usls-id.vercel.app/',
+        link: 'https://id.gdsc-usls.live/',
       },
       item2: {
         title: 'Umamin',
