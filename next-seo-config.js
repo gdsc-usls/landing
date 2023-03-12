@@ -9,7 +9,7 @@ export default {
   description,
   openGraph: {
     type: 'website',
-    url: 'https://gdscusls.live',
+    url: 'https://gdsc-usls.live',
     title: 'Powered by Intellect, Driven by Values',
     description,
     images: [
