@@ -3,7 +3,10 @@ import Image from 'next/image';
 
 export const Contact = () => {
   return (
-    <section className='contain relative flex flex-col items-end text-white'>
+    <section
+      id='contact'
+      className='contain relative flex flex-col items-end text-white'
+    >
       <Image
         priority
         src='/images/elements/swirlGlass.png'
