@@ -1,5 +1,5 @@
 const description =
-  'Here at Google Developer Student Clubs - USLS, our focal point within all our engagements involving those associated with and invested in our ingenious ambitions is discerning, implementing, and meriting their technological proficiencies under the aegis of Google and our Alma Mater.';
+  'Google Developer Student Clubs - USLS is a community of students who connect, learn, and grow together.';
 
 const imgUrl =
   'https://user-images.githubusercontent.com/69457996/223909395-d151c5c8-56bd-44ac-bfa0-c4ddfd26b87f.png';
