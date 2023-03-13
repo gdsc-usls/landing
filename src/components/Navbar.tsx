@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -92,9 +93,12 @@ export const Navbar = () => {
   return (
     <>
       <div className='fixed left-0 right-0 z-40 m-auto mt-10 flex max-w-screen-2xl justify-between px-7 text-white mix-blend-difference md:px-14 lg:items-center'>
-        <a href='#' className='logo font-merchant-expanded text-xl opacity-0'>
+        <Link
+          href='/'
+          className='logo font-merchant-expanded text-xl opacity-0'
+        >
           GDSC USLS
-        </a>
+        </Link>
 
         <button
           type='button'
