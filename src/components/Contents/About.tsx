@@ -41,9 +41,9 @@ export const About = () => {
           Google Developer <br /> Student Clubs —
         </h2>
         <p className='text-body ml-auto w-full text-right font-merchant-thin sm:w-[80%] md:leading-8 lg:w-[65%]'>
-          The quick brown fox jumps over the lazy dog near the bank of the river
-          the quick brown fox jumps over the lazy dog near the bank of the
-          river.
+          Gathering like-minded, inquisitive youths who are eager to learn and
+          deepen their knowledge of the world with the help of Google Technology
+          to solve real world problems.
         </p>
       </div>
       <div className='flex flex-col-reverse gap-20  lg:flex-row lg:justify-between'>
@@ -70,9 +70,10 @@ export const About = () => {
             GDSC - USLS
           </h3>
           <p className='text-body font-merchant-thin sm:w-[80%] lg:mx-auto 2xl:w-1/2'>
-            The quick brown fox jumps over the lazy dog near the bank of the
-            river the quick brown fox jumps over the lazy dog near the bank of
-            the river.
+            We foster innovation, compassion, and technical excellence. Our
+            workshops, initiatives, and projects promote collaborative learning
+            and Lasallian camaraderie. — Join us to enhance your tech skills and
+            achieve your goals in an inclusive and supportive community.
           </p>
         </div>
       </div>
