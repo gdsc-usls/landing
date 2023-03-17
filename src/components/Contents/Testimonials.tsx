@@ -4,49 +4,50 @@ import Image from 'next/image';
 export const Testimonials = () => {
   const testimonials = [
     {
-      name: 'Ashley Ko',
+      name: 'Name Name',
       role: 'UI/UX Designer',
       message:
-        'GDSC became the playground that helped me furhter my tech skills and meet amazing people, while also ampluifying our own individualities.',
+        'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
     },
     {
-      name: 'Renzo Tan',
+      name: 'Joseph Dale Bañares',
       role: 'Software Enginer',
       message:
-        'Not only did GDSC help develop my technical skills, but also allowed me to expand and hone my interpersonal skills as well.',
+        'GDSC has provided me with a space to hone my technical and social skills, explore new technologies, build lasting connections with like-minded individuals, and pursue my passions alongside a diverse community.',
     },
     {
-      name: 'Emman Evangelista',
+      name: 'Name Name',
       role: 'Software Developer',
       message:
-        'I am proud to say that I have learned a lot of new stuff BUT I know that there is still so much more to explore and learn in the world of technology!',
+        'uip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla parat non proident, sunt in culpa qui officia deserunt mollit anim id.',
     },
     {
-      name: 'Gio Divino',
+      name: 'Name Name',
       role: 'Software Engineer',
       message:
-        'I was able to hone my technical skills and build meaningful relationships with this inclusive community.',
+        'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco la',
     },
     {
-      name: 'Franz Taborlupa',
+      name: 'Name Name',
       role: 'Data Scientist',
       message:
-        'GDSC helped me become the leader I am today and carved the path for me towards data science.',
+        'Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation scing elit, sed do eiusmod tempor incididunt ut labore et ',
     },
   ];
 
   return (
     <section className='contain relative mb-20 pt-20  text-white  md:mb-0 xl:mb-56'>
       <div id='testimonials-title' className='mb-20'>
-        <h3 className='text-title w-[80%] xl:mb-10 2xl:w-[60%]'>
-          See what lorempsu sit testimonials
-        </h3>
+        <h3 className='text-title xl:mb-10'>The GDSC Experience</h3>
         <div className='grid-cols-2 border-t-[1px] border-t-white pt-7 xl:grid xl:pt-10'>
           <p className='text-body mb-3 uppercase xl:mb-0'>About Us</p>
           <p className='text-body'>
-            The quick brown fox jumps over the lazy dog near the bank of the
-            river Reference site about Lorem Ipsum, giving information on its
-            origins, as well as a random Lipsum generator.
+            GDSC is a community of passionate learners who are dedicated to
+            explore the endless possibilities of technology through interactive
+            workshops, engaging initiatives, and camaraderie, with a focus on
+            individual and communal growth. Hear from our members about how we
+            hone technical skills, invigorate the passion for development, and
+            instill integral values.
           </p>
         </div>
         <Image

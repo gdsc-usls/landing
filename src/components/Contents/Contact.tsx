@@ -26,9 +26,9 @@ export const Contact = () => {
       <div className='mt-10 w-full md:w-3/4 lg:mt-0 xl:w-[60%]'>
         <h3
           id='contact-title'
-          className='mb-10 font-merchant-expanded leading-8 [fontSize:clamp(1.6rem,4vw,3.8rem)]  sm:leading-tight md:mb-20 lg:mt-16 lg:leading-none'
+          className='mb-10 font-merchant-expanded leading-10 [fontSize:clamp(1.6rem,4vw,3.8rem)] sm:leading-tight md:mb-20 lg:mt-16'
         >
-          Ready to uplift lorem ipsum the qick brwn fox?
+          Have a Question? <br /> Get in Touch!
         </h3>
         <form
           id='contact-form'
