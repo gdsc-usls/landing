@@ -8,8 +8,8 @@ export const Partners = () => {
       logo: '/images/icons/gdsc-logo.svg',
     },
     {
-      name: 'GDSC USLS 2',
-      logo: '/images/icons/gdsc-logo.svg',
+      name: 'Umamin',
+      logo: '/images/icons/umamin-logo.svg',
     },
     {
       name: 'GDSC USLS 3',
