@@ -4,24 +4,24 @@ import Image from 'next/image';
 export const Events = () => {
   const events = [
     {
-      title: 'Devfest 2022',
-      date: 'October 16, 2022',
-      link: '#',
+      title: 'Solution Challenge',
+      date: 'SOLCHA 2023',
+      link: 'https://gdsc-usls.live/solcha-info',
     },
     {
-      title: 'General Assembly',
-      date: 'August 7, 2022',
-      link: '#',
+      title: 'International Event: Perennial',
+      date: 'Dec 5 - 6, 2022',
+      link: 'https://gdsc.community.dev/events/details/developer-student-clubs-university-of-st-la-salle-presents-international-gdsc-chapters-collab-perennial-diving-into-the-world-of-software/',
     },
     {
-      title: 'International Event',
-      date: 'November 19, 2022',
-      link: '#',
+      title: '1st General Assembly',
+      date: 'September 30, 2022',
+      link: 'https://gdsc.community.dev/events/details/developer-student-clubs-university-of-st-la-salle-presents-1st-general-assembly/',
     },
     {
       title: 'Info Session',
-      date: 'February 26, 2023',
-      link: '#',
+      date: 'Sep 24, 2022',
+      link: 'https://gdsc.community.dev/events/details/developer-student-clubs-university-of-st-la-salle-presents-info-session-ay-2022-2023/',
     },
   ];
 
@@ -36,7 +36,7 @@ export const Events = () => {
             <p className='mb-1 font-montserrat uppercase [fontSize:clamp(0.6rem,1.5vw,1rem)] lg:mb-2  xl:mb-4'>
               {event.date}
             </p>
-            <a href={event.link}>
+            <a href={event.link} target='_blank' rel='noreferrer'>
               <h3 className='text-title inline-block uppercase'>
                 {event.title}
               </h3>
