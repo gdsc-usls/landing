@@ -4,28 +4,28 @@ import Image from 'next/image';
 export const Testimonials = () => {
   const testimonials = [
     {
-      name: 'Name Name',
+      name: 'Gian Aibo Boyero',
       role: 'UI/UX Designer',
       message:
-        'lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation',
+        'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco la',
     },
     {
       name: 'Joseph Dale Bañares',
-      role: 'Software Enginer',
-      message:
-        'GDSC has provided me with a space to hone my technical and social skills, explore new technologies, build lasting connections with like-minded individuals, and pursue my passions alongside a diverse community.',
-    },
-    {
-      name: 'Name Name',
-      role: 'Software Developer',
-      message:
-        'uip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla parat non proident, sunt in culpa qui officia deserunt mollit anim id.',
-    },
-    {
-      name: 'Name Name',
       role: 'Software Engineer',
       message:
-        'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco la',
+        'GDSC has provided me with invaluable experiences, opportunities, and connections, and has allowed me to grow both technically and socially within a supportive community of passionate learners.',
+    },
+    {
+      name: 'Leigh Andrew Eslawa',
+      role: 'Graphic Designer',
+      message:
+        'Working for GDSC has been like embarking on a grand literary adventure, with each chapter bringing new lessons, experiences, and new insights that will undoubtedly shape my future.',
+    },
+    {
+      name: 'Josh Daniel Bañares',
+      role: 'Software Engineer',
+      message:
+        'GDSC has been a catalyst for my personal growth. It has enabled me to connect with exceptional individuals, learn critical skills, and grow as a person.',
     },
     {
       name: 'Name Name',
