@@ -24,16 +24,20 @@ export const Footer = () => {
       title: 'Projects',
       items: [
         {
+          title: 'Umamin',
+          link: 'https://umamin.link/',
+        },
+        {
           title: 'ID Generator',
-          link: 'https://id.gdsc-usls.live/',
+          link: 'https://github.com/gdsc-usls/id-generator',
         },
         {
           title: 'Certificate Generator',
-          link: 'https://certs.gdsc-usls.live/',
+          link: 'https://github.com/gdsc-usls/certificate-generator',
         },
         {
-          title: 'Umamin',
-          link: 'https://umamin.link/',
+          title: 'Landing Page',
+          link: 'https://github.com/gdsc-usls/landing',
         },
       ],
     },
