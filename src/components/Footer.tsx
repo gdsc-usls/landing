@@ -81,7 +81,7 @@ export const Footer = () => {
                 <h3 className='font-medium text-white'>{title}</h3>
                 <ul className='flex flex-col  space-y-2 font-normal text-gray-400 [&>li>a:hover]:text-gray-500 [&>li>a:hover]:transition-all'>
                   {items.map((item) => (
-                    <li>
+                    <li key={item.title}>
                       <a
                         target='_blank'
                         rel='noreferrer noopener'
