@@ -4,50 +4,56 @@ export const Footer = () => {
   const data = [
     {
       title: 'Solcha',
-      item1: {
-        title: 'Information',
-        link: '/solcha-info',
-      },
-      item2: {
-        title: 'Register',
-        link: 'https://developers.google.com/community/gdsc-solution-challenge',
-      },
-      item3: {
-        title: 'SDGs',
-        link: 'https://developers.google.com/community/gdsc-solution-challenge/UN-goals',
-      },
+      items: [
+        {
+          title: 'Information',
+          link: '/solcha-info',
+        },
+        {
+          title: 'Register',
+          link: 'https://developers.google.com/community/gdsc-solution-challenge',
+        },
+        {
+          title: 'SDGs',
+          link: 'https://developers.google.com/community/gdsc-solution-challenge/UN-goals',
+        },
+      ],
     },
 
     {
       title: 'Projects',
-      item1: {
-        title: 'ID Generator',
-        link: 'https://id.gdsc-usls.live/',
-      },
-      item2: {
-        title: 'Umamin',
-        link: 'https://umamin.link/',
-      },
-      item3: {
-        title: 'Landing',
-        link: 'https://github.com/gdsc-usls/landing',
-      },
+      items: [
+        {
+          title: 'ID Generator',
+          link: 'https://id.gdsc-usls.live/',
+        },
+        {
+          title: 'Certificate Generator',
+          link: 'https://certs.gdsc-usls.live/',
+        },
+        {
+          title: 'Umamin',
+          link: 'https://umamin.link/',
+        },
+      ],
     },
 
     {
       title: 'Contact',
-      item1: {
-        title: 'Github',
-        link: 'https://github.com/gdsc-usls',
-      },
-      item2: {
-        title: 'Facebook',
-        link: 'https://www.facebook.com/dsc.usls',
-      },
-      item3: {
-        title: 'Instagram',
-        link: 'https://www.instagram.com/gdsc_usls/',
-      },
+      items: [
+        {
+          title: 'Github',
+          link: 'https://github.com/gdsc-usls',
+        },
+        {
+          title: 'Facebook',
+          link: 'https://www.facebook.com/dsc.usls',
+        },
+        {
+          title: 'Instagram',
+          link: 'https://www.instagram.com/gdsc_usls/',
+        },
+      ],
     },
   ];
 
@@ -68,48 +74,30 @@ export const Footer = () => {
 
         <div className='flex w-full justify-between'>
           {data.map((data) => {
-            const { title, item1, item2, item3 } = data;
+            const { title, items } = data;
 
             return (
               <div key={title} className='space-y-2 text-sm md:text-base'>
                 <h3 className='font-medium text-white'>{title}</h3>
                 <ul className='flex flex-col  space-y-2 font-normal text-gray-400 [&>li>a:hover]:text-gray-500 [&>li>a:hover]:transition-all'>
-                  <li>
-                    <a
-                      target='_blank'
-                      rel='noreferrer noopener'
-                      href={item1.link}
-                    >
-                      {item1.title}
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      target='_blank'
-                      rel='noreferrer noopener'
-                      href={item2.link}
-                    >
-                      {item2.title}
-                    </a>
-                  </li>
-                  {item3 && (
+                  {items.map((item) => (
                     <li>
                       <a
                         target='_blank'
                         rel='noreferrer noopener'
-                        href={item3.link}
+                        href={item.link}
                       >
-                        {item3.title}
+                        {item.title}
                       </a>
                     </li>
-                  )}
+                  ))}
                 </ul>
               </div>
             );
           })}
         </div>
       </div>
-      <p className='mt-28 pb-5 text-center text-xs text-gray-400 md:text-base'>
+      <p className='mt-28 pb-8 text-center text-xs text-gray-400 md:text-base'>
         &copy; 2023 Google Developer Student Clubs — USLS. All Rights Reserved.
       </p>
     </footer>
