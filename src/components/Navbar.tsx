@@ -102,7 +102,7 @@ export const Navbar = () => {
 
         <button
           type='button'
-          className='menu-burger group flex w-8 cursor-pointer flex-col items-center justify-center space-y-1 opacity-0 [&>span]:block [&>span]:h-[1.5px] [&>span]:w-full [&>span]:transform [&>span]:bg-white [&>span]:transition [&>span]:duration-300'
+          className='menu-burger group flex  w-8 cursor-pointer flex-col items-center justify-center space-y-1 py-3 opacity-0 [&>span]:block [&>span]:h-[1.5px] [&>span]:w-full [&>span]:transform [&>span]:bg-white [&>span]:transition [&>span]:duration-300'
           onClick={() => handleMenu()}
         >
           <span
@@ -170,13 +170,16 @@ const Menu = ({ handleMenu }: { handleMenu: () => void }) => {
       cloneDiv.style.top = '0';
       item.appendChild(cloneDiv);
     });
-  }, []);
+  }, [router.pathname]);
 
   gsap.registerPlugin(ScrollToPlugin);
 
   const scrollToSection = (scrollElement: string, offsetY: number) => {
     handleMenu();
 
+    if (router.pathname !== '/') {
+      router.push('/');
+    }
     gsap.to(window, {
       duration: 1,
       scrollTo: { y: `#${scrollElement}`, offsetY },
@@ -187,25 +190,57 @@ const Menu = ({ handleMenu }: { handleMenu: () => void }) => {
   return (
     <div className='menu fixed top-0 left-0 grid h-screen w-screen place-items-center justify-center space-y-1 bg-black text-white [clipPath:polygon(0%_0%,_100%_0%,_100%_0%,_0%_0%)]'>
       <div className='flex flex-col items-center gap-5'>
-        {navText.map((text) => (
-          <button
-            type='button'
-            key={text.text}
-            className='menu-item font-merchant-thin-condensed text-6xl uppercase text-white opacity-0'
-            onClick={() => {
-              if (text.behaviour === 'link') {
-                handleMenu();
-                router.push(text.href);
-              } else {
-                scrollToSection(text.href, text.href === 'about' ? -150 : 100);
-              }
-            }}
-          >
-            <div className='flex'>
-              <span className='menu-item-text'>{text.text}</span>
-            </div>
-          </button>
-        ))}
+        {router.pathname === '/' &&
+          navText.map((text) => (
+            <button
+              type='button'
+              key={text.text}
+              className='menu-item font-merchant-thin-condensed text-6xl uppercase text-white opacity-0'
+              onClick={() => {
+                if (text.behaviour === 'link') {
+                  handleMenu();
+                  router.push(text.href);
+                } else {
+                  scrollToSection(
+                    text.href,
+                    text.href === 'about' ? -150 : 100
+                  );
+                }
+              }}
+            >
+              <div className='flex'>
+                <span className='menu-item-text'>{text.text}</span>
+              </div>
+            </button>
+          ))}
+
+        {router.pathname !== '/' &&
+          navText.map((text) => {
+            return (
+              text.behaviour === 'link' && (
+                <button
+                  type='button'
+                  key={text.text}
+                  className='menu-item font-merchant-thin-condensed text-6xl uppercase text-white opacity-0'
+                  onClick={() => {
+                    if (text.behaviour === 'link') {
+                      handleMenu();
+                      router.push(text.href);
+                    } else {
+                      scrollToSection(
+                        text.href,
+                        text.href === 'about' ? -150 : 100
+                      );
+                    }
+                  }}
+                >
+                  <div className='flex'>
+                    <span className='menu-item-text'>{text.text}</span>
+                  </div>
+                </button>
+              )
+            );
+          })}
       </div>
     </div>
   );
