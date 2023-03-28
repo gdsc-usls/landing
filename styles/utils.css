@@ -75,3 +75,33 @@
 .menu-item:hover > div:nth-child(2) span {
   transform: translate3d(0, 0%, 0) rotateX(0deg);
 }
+
+.animated-gradient {
+  background: linear-gradient(
+    to right,
+    rgb(55, 118, 255),
+    rgb(82, 180, 82),
+    rgb(194, 194, 43),
+    rgb(223, 44, 44)
+  );
+  background-size: 200% 200%;
+  animation: rainbow 2s ease-in-out infinite;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: rgb(255, 255, 255);
+  transition: color 0.2s ease-in-out;
+}
+.animated-gradient:hover {
+  color: rgba(0, 0, 0, 0);
+}
+@keyframes rainbow {
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}

@@ -33,11 +33,11 @@ export const Events = () => {
             key={event.title}
             className='border-b-[1px] border-b-gray-200 py-6 text-white md:py-8 lg:py-10'
           >
-            <p className='mb-1 font-montserrat uppercase [fontSize:clamp(0.6rem,1.5vw,1rem)] lg:mb-2  xl:mb-4'>
+            <p className='mb-1 font-montserrat uppercase text-slate-400 [fontSize:clamp(0.6rem,1.5vw,1rem)] lg:mb-2  xl:mb-4'>
               {event.date}
             </p>
             <a href={event.link} target='_blank' rel='noreferrer'>
-              <h3 className='text-title inline-block uppercase'>
+              <h3 className='animated-gradient text-title inline-block uppercase'>
                 {event.title}
               </h3>
             </a>
