@@ -4,15 +4,11 @@ import Image from 'next/image';
 export const Partners = () => {
   const partners = [
     {
-      name: 'GDSC USLS',
-      logo: '/images/icons/gdsc-logo.svg',
-    },
-    {
       name: 'Umamin',
       logo: '/images/icons/umamin-logo.svg',
     },
     {
-      name: 'GDSC USLS 3',
+      name: 'GDSC USLS',
       logo: '/images/icons/gdsc-logo.svg',
     },
   ];
@@ -23,7 +19,7 @@ export const Partners = () => {
         id='partners-title'
         className='contain text-center font-merchant-thin-condensed text-white [fontSize:clamp(1.3rem,4vw,3rem)]'
       >
-        A community built with trusted companies and partners
+        Built with trusted community partners
       </p>
 
       <div

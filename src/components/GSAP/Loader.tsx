@@ -147,7 +147,7 @@ export const Loader = () => {
             <div>
               <Image
                 priority
-                src='/images/icons/gdsc-logo.svg'
+                src='/images/icons/gdsc-logo-white.svg'
                 alt='GDSC Logo'
                 height={100}
                 width={100}
