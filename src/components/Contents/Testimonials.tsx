@@ -5,9 +5,15 @@ export const Testimonials = () => {
   const testimonials = [
     {
       name: 'Gian Aibo Boyero',
-      role: 'UI/UX Designer',
+      role: 'GDSC USLS Lead',
       message:
-        'consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco la',
+        "GDSC-USLS is an extraordinary community of talented and dedicated individuals who constantly strive to learn, grow and achieve their goals. I am so grateful to be a part of this community, and I know that I'm learning, growing every day, and had limitless opportunities because of what they have established.",
+    },
+    {
+      name: 'Jiyun Bae',
+      role: 'GDSC SWU Lead',
+      message:
+        'It was a pleasure to work with GDSC-USLS. Gian has a wonderful team of kind and helpful people, and the positive energy that comes from this team is worth some praise. It is an honour to have worked with such a team.',
     },
     {
       name: 'Joseph Dale Bañares',
@@ -26,12 +32,6 @@ export const Testimonials = () => {
       role: 'Software Engineer',
       message:
         'GDSC has been a catalyst for my personal growth. It has enabled me to connect with exceptional individuals, learn critical skills, and grow as a person.',
-    },
-    {
-      name: 'Name Name',
-      role: 'Data Scientist',
-      message:
-        'Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation scing elit, sed do eiusmod tempor incididunt ut labore et ',
     },
   ];
 
