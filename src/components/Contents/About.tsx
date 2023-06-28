@@ -60,7 +60,7 @@ export const About = () => {
             USLS
           </p>
           <p className='text-right font-montserrat uppercase [fontSize:clamp(0.6rem,1.5vw,1rem)]'>
-            University of St. La Salle <br /> — Bacolod{' '}
+            University of St. La Salle
           </p>
         </div>
       </div>
