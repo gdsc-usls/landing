@@ -1,3 +1,4 @@
+import { useRouter } from 'next/router';
 import React from 'react';
 
 export const Footer = () => {
@@ -8,6 +9,7 @@ export const Footer = () => {
         {
           title: 'Information',
           link: '/solcha-info',
+          route: true,
         },
         {
           title: 'Register',
@@ -61,6 +63,8 @@ export const Footer = () => {
     },
   ];
 
+  const router = useRouter();
+
   return (
     <footer className='contain mt-96 flex w-full flex-col justify-between border-t-[1px] border-t-gray-500 pt-16 font-montserrat '>
       <div className='flex w-full flex-col justify-between gap-20 whitespace-nowrap lg:flex-row lg:gap-40 xl:gap-96'>
@@ -86,13 +90,22 @@ export const Footer = () => {
                 <ul className='flex flex-col  space-y-2 font-normal text-gray-400 [&>li>a:hover]:text-gray-500 [&>li>a:hover]:transition-all'>
                   {items.map((item) => (
                     <li key={item.title}>
-                      <a
-                        target='_blank'
-                        rel='noreferrer noopener'
-                        href={item.link}
-                      >
-                        {item.title}
-                      </a>
+                      {item.route ? (
+                        <button
+                          type='button'
+                          onClick={() => router.push(item.link)}
+                        >
+                          {item.title}
+                        </button>
+                      ) : (
+                        <a
+                          target='_blank'
+                          rel='noreferrer noopener'
+                          href={item.link}
+                        >
+                          {item.title}
+                        </a>
+                      )}
                     </li>
                   ))}
                 </ul>
