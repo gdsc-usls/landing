@@ -1,10 +1,10 @@
 import React from 'react';
 import { gsap } from 'gsap';
 import Image from 'next/image';
-import { markdown } from '~/utils/constants';
-import { Markdown } from '~/components';
-import useLayoutEffect from '~/hooks/useIsomorphicLayoutEffect';
 import type { NextPage } from 'next';
+import { Markdown } from '~/components';
+import { markdown } from '~/utils/constants';
+import useLayoutEffect from '~/hooks/useIsomorphicLayoutEffect';
 
 const SolchaInfo: NextPage = () => {
   useLayoutEffect(() => {

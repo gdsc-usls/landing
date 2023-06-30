@@ -14,6 +14,8 @@ module.exports = {
         'merchant-expanded': ['MerchantExp', 'serif'],
         'merchant-thin-condensed': ['MerchantThinCond', 'serif'],
         montserrat: ['Montserrat', 'sans-serif'],
+        'googleSans-regular': ['GoogleSansReg', 'sans-serif'],
+        'googleSans-medium': ['GoogleSansMd', 'sans-serif'],
       },
     },
   },

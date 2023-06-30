@@ -40,7 +40,7 @@ body {
 @font-face {
   font-family: 'MerchantSemBdCond';
   src: url('/fonts/Merchant-SemiBoldCondensed.woff2') format('woff2'),
-    /* Modern Browsers */ url('/Merchant-SemiBoldCondensed.otf')
+    /* Modern Browsers */ url('/fonts/Merchant-SemiBoldCondensed.otf')
       format('opentype'); /* Safari, Android, iOS */
   font-style: normal;
   font-weight: normal;
@@ -51,7 +51,7 @@ body {
 @font-face {
   font-family: 'MerchantThin';
   src: url('/fonts/Merchant-Thin.woff2') format('woff2'),
-    /* Modern Browsers */ url('/Merchant-Thin.otf') format('opentype'); /* Safari, Android, iOS */
+    /* Modern Browsers */ url('/fonts/Merchant-Thin.otf') format('opentype'); /* Safari, Android, iOS */
   font-style: normal;
   font-weight: normal;
   text-rendering: optimizeLegibility;
@@ -61,7 +61,7 @@ body {
 @font-face {
   font-family: 'MerchantExp';
   src: url('/fonts/Merchant-Expanded.woff2') format('woff2'),
-    /* Modern Browsers */ url('/Merchant-Expanded.otf') format('opentype'); /* Safari, Android, iOS */
+    /* Modern Browsers */ url('/fonts/Merchant-Expanded.otf') format('opentype'); /* Safari, Android, iOS */
   font-style: normal;
   font-weight: normal;
   text-rendering: optimizeLegibility;
@@ -71,7 +71,24 @@ body {
 @font-face {
   font-family: 'MerchantThinCond';
   src: url('/fonts/Merchant-ThinCondensed.woff2') format('woff2'),
-    /* Modern Browsers */ url('/Merchant-ThinCondensed.otf') format('opentype'); /* Safari, Android, iOS */
+    /* Modern Browsers */ url('/fonts/Merchant-ThinCondensed.otf')
+      format('opentype'); /* Safari, Android, iOS */
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'GoogleSansReg';
+  src: url('/fonts/ProductSans-Regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: 'GoogleSansMd';
+  src: url('/fonts/ProductSans-Medium.woff2') format('woff2');
   font-style: normal;
   font-weight: normal;
   text-rendering: optimizeLegibility;
