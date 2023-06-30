@@ -47,6 +47,12 @@ const Partners = () => {
     'Mukesh Patel School of Technology Management and Engineering',
   ];
 
+  const partnersUSLS = [
+    'College of Engineering & Technology Council - CET USLS',
+    'USLS Computer Studies Department ',
+    'USLS IT & EMC Department ',
+  ];
+
   const router = useRouter();
 
   return (
@@ -57,6 +63,16 @@ const Partners = () => {
       >
         Built with trusted community partners
       </p>
+
+      <div className='my-10 flex flex-wrap items-center justify-center gap-10 md:gap-20 lg:my-20'>
+        {partnersUSLS.map((partner) => (
+          <div className='' key={partner}>
+            <p className='mt-2 text-center font-googleSans-medium font-medium text-white'>
+              {partner}
+            </p>
+          </div>
+        ))}
+      </div>
 
       <div
         id='partners-logos'
