@@ -18,6 +18,8 @@ const Partners = () => {
   }, []);
 
   const partnersGDSC = [
+    'De La Salle University',
+    'University of Science and Technology of Southern Philippines',
     'Tohoku University',
     "Seoul Women's University",
     'Binus University Malang',
@@ -48,7 +50,7 @@ const Partners = () => {
   const router = useRouter();
 
   return (
-    <section className='contain relative z-20 mb-96 flex min-h-[70vh] flex-col items-center justify-center pt-44 pb-96 xl:min-h-screen'>
+    <section className='contain relative z-20 flex min-h-[70vh] flex-col items-center justify-center pt-44 pb-36 xl:mb-96 xl:min-h-screen xl:pb-96'>
       <p
         id='partners-title'
         className='contain text-center font-merchant-thin-condensed text-white [fontSize:clamp(1.3rem,4vw,3rem)]'
@@ -91,7 +93,7 @@ const Partners = () => {
         src='/images/elements/gridsDotted.png'
         alt='Dotted Grids'
         fill
-        className='pointer-events-none absolute top-0 left-0 z-[-2] object-contain opacity-80'
+        className='pointer-events-none z-[-2] object-contain opacity-80'
       />
     </section>
   );

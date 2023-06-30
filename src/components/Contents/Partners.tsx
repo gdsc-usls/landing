@@ -18,11 +18,7 @@ export const Partners = () => {
     },
   ];
 
-  const partnersGDSC = [
-    'Philippines',
-    'University of Science and Technology of Southern Philippines',
-    'De La Salle University',
-  ];
+  const partnersGDSC = ['GDSC Philippines', 'GDG Bacolod'];
 
   const router = useRouter();
 
@@ -62,9 +58,6 @@ export const Partners = () => {
                 className='logo mx-auto scale-[0.6] sm:scale-75 md:scale-100'
               />
               <p className='mt-2 text-center font-googleSans-medium font-medium text-white'>
-                Google Developer Student Clubs
-              </p>
-              <p className='max-w-xs text-center font-googleSans-regular text-white'>
                 {partner}
               </p>
             </div>
