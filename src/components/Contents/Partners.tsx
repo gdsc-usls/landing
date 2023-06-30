@@ -13,6 +13,18 @@ export const Partners = () => {
       logo: '/images/icons/zuitt-logo.svg',
     },
     {
+      name: 'CET',
+      logo: '/images/icons/cet-logo.svg',
+    },
+    {
+      name: 'Tigris',
+      logo: '/images/icons/tigris-logo.svg',
+    },
+    {
+      name: 'USG',
+      logo: '/images/icons/usg-logo.svg',
+    },
+    {
       name: 'CSS',
       logo: '/images/icons/css-logo.svg',
     },
@@ -20,18 +32,25 @@ export const Partners = () => {
       name: 'ITS',
       logo: '/images/icons/its-logo.svg',
     },
-    {
-      name: 'USG',
-      logo: '/images/icons/usg-logo.svg',
-    },
   ];
 
   const partnersGDSC = ['Philippines', 'USTP', 'DLSU'];
 
+  const longLogoPartners = [
+    {
+      name: 'ISACA',
+      logo: '/images/icons/isaca-logo.svg',
+    },
+    {
+      name: 'Rotaract',
+      logo: '/images/icons/rotaract-logo.svg',
+    },
+  ];
+
   const router = useRouter();
 
   return (
-    <section className='contain relative flex min-h-[70vh] flex-col items-center justify-center xl:min-h-screen'>
+    <section className='contain relative flex min-h-[70vh] flex-col items-center justify-center py-44 xl:min-h-screen'>
       <p
         id='partners-title'
         className='contain text-center font-merchant-thin-condensed text-white [fontSize:clamp(1.3rem,4vw,3rem)]'
@@ -51,10 +70,11 @@ export const Partners = () => {
               alt={partner.name}
               height={80}
               width={80}
-              className='scale-[0.6] sm:scale-75 md:scale-100'
+              className='h-16 w-auto  scale-[0.6] sm:scale-75 md:scale-100'
             />
           ))}
         </div>
+        {/* GDSC */}
         <div className='my-10 flex flex-wrap items-center justify-center gap-10 md:gap-20 lg:my-20'>
           <div>
             <Image
@@ -62,9 +82,9 @@ export const Partners = () => {
               alt='gdsc-logo'
               height={80}
               width={80}
-              className='logo mx-auto scale-[0.6] sm:scale-75 md:scale-100'
+              className='logo mx-auto h-20 scale-[0.6] sm:scale-75 md:scale-100'
             />
-            <p className='mt-2 text-center font-googleSans-medium font-medium text-white'>
+            <p className='-mt-3 text-center font-googleSans-medium font-medium text-white'>
               Google Developer Group
             </p>
             <p className='max-w-xs text-center font-googleSans-regular text-white'>
@@ -78,15 +98,30 @@ export const Partners = () => {
                 alt='gdsc-logo'
                 height={80}
                 width={80}
-                className='logo mx-auto scale-[0.6] sm:scale-75 md:scale-100'
+                className='logo mx-auto h-20 scale-[0.6] sm:scale-75 md:scale-100'
               />
-              <p className='mt-2 text-center font-googleSans-medium font-medium text-white'>
+              <p className='-mt-3 text-center font-googleSans-medium font-medium text-white'>
                 Google Developer Student Clubs
               </p>
               <p className='max-w-xs text-center font-googleSans-regular text-white'>
                 {partner}
               </p>
             </div>
+          ))}
+        </div>
+        <div
+          id='partners-logos'
+          className='my-10 flex flex-wrap items-center justify-center gap-10 md:gap-20 lg:my-20'
+        >
+          {longLogoPartners.map((partner) => (
+            <Image
+              key={partner.name}
+              src={partner.logo}
+              alt={partner.name}
+              height={80}
+              width={80}
+              className='h-14 w-auto  scale-[0.6] sm:scale-75 md:scale-100'
+            />
           ))}
         </div>
       </div>

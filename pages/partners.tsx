@@ -48,7 +48,6 @@ const Partners = () => {
   ];
 
   const partnersUSLS = [
-    'College of Engineering & Technology Council - CET USLS',
     'USLS Computer Studies Department ',
     'USLS IT & EMC Department ',
   ];
