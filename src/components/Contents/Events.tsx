@@ -4,18 +4,23 @@ import Image from 'next/image';
 export const Events = () => {
   const events = [
     {
+      title: 'Google Awards',
+      date: 'July 15, 2023',
+      link: 'https://awards.gdsc-usls.live',
+    },
+    {
       title: 'Solution Challenge',
-      date: 'SOLCHA 2023',
+      date: 'March, 2023',
       link: 'https://gdsc-usls.live/solcha-info',
     },
     {
       title: 'International Event: Perennial',
-      date: 'Dec 5 - 6, 2022',
+      date: 'Dec 5-6, 2022',
       link: 'https://gdsc.community.dev/events/details/developer-student-clubs-university-of-st-la-salle-presents-international-gdsc-chapters-collab-perennial-diving-into-the-world-of-software/',
     },
     {
       title: '1st General Assembly',
-      date: 'September 30, 2022',
+      date: 'Sep 30, 2022',
       link: 'https://gdsc.community.dev/events/details/developer-student-clubs-university-of-st-la-salle-presents-1st-general-assembly/',
     },
     {
