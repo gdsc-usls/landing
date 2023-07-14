@@ -139,8 +139,8 @@ const Menu = ({ handleMenu }: { handleMenu: () => void }) => {
       behaviour: 'link',
     },
     {
-      text: 'solcha',
-      href: '/solcha-info',
+      text: 'awards',
+      href: '/awards',
       behaviour: 'link',
     },
     {
