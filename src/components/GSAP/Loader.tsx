@@ -155,8 +155,8 @@ export const Loader = () => {
                 id='gdsc-logo'
               />
               <div className='text-load z-10 flex gap-4 font-montserrat text-lg text-white [&>p]:opacity-0'>
-                <p>Connect,</p>
-                <p>Learn,</p>
+                <p>Connect</p>
+                <p>Learn</p>
                 <p>Grow</p>
               </div>
             </div>
