@@ -4,20 +4,20 @@ import React from 'react';
 export const Footer = () => {
   const data = [
     {
-      title: 'Solcha',
+      title: 'Google Awards',
       items: [
         {
-          title: 'Information',
-          link: '/solcha-info',
-          route: true,
+          title: 'Awards',
+          link: 'https://awards.gdsc-usls.live/awards',
         },
         {
-          title: 'Register',
-          link: 'https://developers.google.com/community/gdsc-solution-challenge',
+          title: 'Ticket',
+          link: 'https://awards.gdsc-usls.live/ticket',
         },
         {
-          title: 'SDGs',
-          link: 'https://developers.google.com/community/gdsc-solution-challenge/UN-goals',
+          title: 'Homepage',
+          link: 'https://awards.gdsc-usls.live',
+          route: false,
         },
       ],
     },
@@ -26,8 +26,12 @@ export const Footer = () => {
       title: 'Projects',
       items: [
         {
-          title: 'Umamin',
-          link: 'https://umamin.link/',
+          title: 'Landing Page',
+          link: 'https://github.com/gdsc-usls/landing',
+        },
+        {
+          title: 'Google Awards',
+          link: 'https://github.com/gdsc-usls/google-awards',
         },
         {
           title: 'ID Generator',
@@ -36,10 +40,6 @@ export const Footer = () => {
         {
           title: 'Certificate Generator',
           link: 'https://github.com/gdsc-usls/certificate-generator',
-        },
-        {
-          title: 'Landing Page',
-          link: 'https://github.com/gdsc-usls/landing',
         },
       ],
     },
