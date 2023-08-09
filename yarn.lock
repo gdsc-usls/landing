@@ -638,6 +638,39 @@
     lodash.merge "^4.6.2"
     postcss-selector-parser "6.0.10"
 
+"@tanstack/form-core@0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@tanstack/form-core/-/form-core-0.0.11.tgz#11e4b9ee5375db3cb17efc53dd7d5774255b38ac"
+  integrity sha512-Sv7b9IG0XmBoDbDe0nXrTTl9xl05TA4ir0pwr/xJwNP683CNRIzBpug3/WVzWoQVLCvRvvmo3t12N75Ip8HQNg==
+  dependencies:
+    "@tanstack/store" "0.0.1-beta.89"
+
+"@tanstack/react-form@^0.0.11":
+  version "0.0.11"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-form/-/react-form-0.0.11.tgz#dc8306edcb5539f0bd56f13e45501054703b5809"
+  integrity sha512-76tyMuDVtHzWHSUSdYPIfpo06RexmSAg4dKMaBToH0yww8l1Y/PNKdoUGcmUHUUFstObm2ufw1VG2YAnsVWx8Q==
+  dependencies:
+    "@tanstack/form-core" "0.0.11"
+    "@tanstack/react-store" "0.0.1-beta.85"
+
+"@tanstack/react-store@0.0.1-beta.85":
+  version "0.0.1-beta.85"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-store/-/react-store-0.0.1-beta.85.tgz#dc3bf3ec30d9b7f539fda551fc07df11b798c7f6"
+  integrity sha512-5APLxQOHgws735Va5ndbS6aa9pIILcximTr5dQeEFRzCNqjLyJ6YHGDuqng9zLMLzCyNILmdEtpNW0tp5l/tNw==
+  dependencies:
+    "@tanstack/store" "0.0.1-beta.85"
+    use-sync-external-store "^1.2.0"
+
+"@tanstack/store@0.0.1-beta.85":
+  version "0.0.1-beta.85"
+  resolved "https://registry.yarnpkg.com/@tanstack/store/-/store-0.0.1-beta.85.tgz#d6f1d2c66787d15e796819b94be08de44be17cbf"
+  integrity sha512-gUn8i4mhS7V5yRTu6NosoKuUBfw4w36JHx0rg2MJ5kAiKukISoTqlzUKKKzmVvVPL6H1xwaDGEf6bmLzLlgZEQ==
+
+"@tanstack/store@0.0.1-beta.89":
+  version "0.0.1-beta.89"
+  resolved "https://registry.yarnpkg.com/@tanstack/store/-/store-0.0.1-beta.89.tgz#4ba77e66a34d7c6dbf33401daffcb505c3022823"
+  integrity sha512-YW2aAhsXI4QYLXRnxZzB7MgEah91itQcWAjN3GYg1HKHxPv/11T5bL1CUCSxFLTI0f+45uNRjsmof6eqsN3ECA==
+
 "@types/debug@^4.0.0":
   version "4.1.7"
   resolved "https://registry.yarnpkg.com/@types/debug/-/debug-4.1.7.tgz#7cc0ea761509124709b8b2d1090d8f6c17aadb82"
@@ -3333,6 +3366,11 @@ react-dom@^18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
+react-firebase-hooks@^5.1.1:
+  version "5.1.1"
+  resolved "https://registry.yarnpkg.com/react-firebase-hooks/-/react-firebase-hooks-5.1.1.tgz#fc92bb4b860c6753c806583f64d7f069b6ee6785"
+  integrity sha512-y2UpWs82xs+39q5Rc/wq316ca52QsC0n8m801V+yM4IC4hbfOL4yQPVSh7w+ydstdvjN9F+lvs1WrO2VYxpmdA==
+
 react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -3645,6 +3683,11 @@ slice-ansi@^5.0.0:
   dependencies:
     ansi-styles "^6.0.0"
     is-fullwidth-code-point "^4.0.0"
+
+sonner@^0.6.2:
+  version "0.6.2"
+  resolved "https://registry.yarnpkg.com/sonner/-/sonner-0.6.2.tgz#d87420e80d8b25b6d2bd6aabcc28465f03962bdc"
+  integrity sha512-bh4FWhYoNN481ZIW94W4e0kSLBTMGislYg2YXvDS1px1AJJz4erQe9jHV8s5pS1VMVDgfh3CslNSFLaU6Ldrnw==
 
 source-map-js@^1.0.2:
   version "1.0.2"
@@ -4020,6 +4063,11 @@ uri-js@^4.2.2:
   integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==
   dependencies:
     punycode "^2.1.0"
+
+use-sync-external-store@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/use-sync-external-store/-/use-sync-external-store-1.2.0.tgz#7dbefd6ef3fe4e767a0cf5d7287aacfb5846928a"
+  integrity sha512-eEgnFxGQ1Ife9bzYs6VLi8/4X6CObHMw9Qr9tPY43iKwsPw8xE8+EFsf/2cFZ5S3esXgpWgtSCtLNS41F+sKPA==
 
 util-deprecate@^1.0.1, util-deprecate@^1.0.2:
   version "1.0.2"

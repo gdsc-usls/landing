@@ -1,7 +1,13 @@
 import React from 'react';
 import { Hero } from '~/components';
 import { Loader, ScrollAnimation } from '~/components/GSAP';
-import { About, Events, Partners, Testimonials } from '~/components/Contents';
+import {
+  About,
+  Events,
+  Contact,
+  Partners,
+  Testimonials,
+} from '~/components/Contents';
 
 export default function Home() {
   return (
@@ -18,6 +24,8 @@ export default function Home() {
             <Testimonials />
           </div>
         </ScrollAnimation>
+
+        <Contact />
       </main>
     </>
   );

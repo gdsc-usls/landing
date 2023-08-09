@@ -139,6 +139,11 @@ const Menu = ({ handleMenu }: { handleMenu: () => void }) => {
       behaviour: 'link',
     },
     {
+      text: 'apply',
+      href: '/apply',
+      behaviour: 'link',
+    },
+    {
       text: 'awards',
       href: '/awards',
       behaviour: 'link',
