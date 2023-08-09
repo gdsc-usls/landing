@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { FormEventHandler } from 'react';
 import { gsap } from 'gsap';
 import useLayoutEffect from '~/hooks/useIsomorphicLayoutEffect';
+import { doc, setDoc } from 'firebase/firestore';
+import { db } from '~/config/firebase';
+import { toast } from 'sonner';
+
+type Member = {
+  id: string;
+  firstName: string;
+  lastName: string;
+};
 
 export default function Apply() {
+  const [firstName, setFirstName] = React.useState('');
+  const [lastName, setLastName] = React.useState('');
+  const [studentId, setStudentId] = React.useState('');
+
   useLayoutEffect(() => {
     gsap.to('body', {
       overflowY: 'scroll',
@@ -15,21 +28,61 @@ export default function Apply() {
     });
   }, []);
 
+  const handleAdd: FormEventHandler = async (e) => {
+    e.preventDefault();
+
+    try {
+      const payload: Omit<Member, 'id'> = {
+        firstName,
+        lastName,
+      };
+
+      await setDoc(doc(db, 'membership', studentId), payload);
+      toast.success('You are now a member!');
+
+      setTimeout(() => {
+        setStudentId('');
+        setFirstName('');
+        setLastName('');
+      }, 500);
+    } catch (err: any) {
+      toast.error(err.message);
+    }
+  };
+
   return (
     <section className='mx-auto max-w-sm pt-40 font-googleSans-regular text-white'>
       <h1 className='font-merchant-thin-condensed text-4xl'>Join GDSC—USLS!</h1>
 
-      <form className='mt-12 flex flex-col gap-y-4'>
-        <Input label='First Name' type='text' maxLength={100} />
-        <Input label='Last Name' type='text' maxLength={100} />
-        <Input label='Student ID' type='text' maxLength={7} />
+      <form onSubmit={handleAdd} className='mt-12 flex flex-col gap-y-4'>
+        <Input
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+          label='First Name'
+          type='text'
+          maxLength={100}
+        />
+        <Input
+          value={lastName}
+          onChange={(e) => setLastName(e.target.value)}
+          label='Last Name'
+          type='text'
+          maxLength={100}
+        />
+        <Input
+          value={studentId}
+          onChange={(e) => setStudentId(e.target.value)}
+          label='Student ID'
+          type='text'
+          maxLength={7}
+        />
 
         <div className='flex gap-x-2 text-sm text-gray-400'>
-          <input type='checkbox' />
+          <input required type='checkbox' />
           <p>All of the information I provided is true and correct.</p>
         </div>
 
-        <button type='button' className='rounded bg-white py-2 text-black'>
+        <button type='submit' className='rounded bg-white py-2 text-black'>
           Become a Member
         </button>
       </form>
