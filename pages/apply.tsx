@@ -1,7 +1,7 @@
 import React, { FormEventHandler } from 'react';
 import { gsap } from 'gsap';
 import useLayoutEffect from '~/hooks/useIsomorphicLayoutEffect';
-import { doc, setDoc } from 'firebase/firestore';
+import { doc, getDoc, serverTimestamp, setDoc } from 'firebase/firestore';
 import { db } from '~/config/firebase';
 import { toast } from 'sonner';
 
@@ -9,6 +9,7 @@ type Member = {
   id: string;
   firstName: string;
   lastName: string;
+  createdAt: any;
 };
 
 export default function Apply() {
@@ -31,27 +32,39 @@ export default function Apply() {
   const handleAdd: FormEventHandler = async (e) => {
     e.preventDefault();
 
+    const payload: Omit<Member, 'id'> = {
+      firstName,
+      lastName,
+      createdAt: serverTimestamp(),
+    };
+
     try {
-      const payload: Omit<Member, 'id'> = {
-        firstName,
-        lastName,
-      };
-
-      await setDoc(doc(db, 'membership', studentId), payload);
-      toast.success('You are now a member!');
-
-      setTimeout(() => {
-        setStudentId('');
-        setFirstName('');
-        setLastName('');
-      }, 500);
+      const user = await getDoc(doc(db, 'membership', studentId));
+      if (user.exists()) {
+        toast.error('You are already a member.');
+        return;
+      }
     } catch (err: any) {
       toast.error(err.message);
     }
+
+    try {
+      await setDoc(doc(db, 'membership', studentId), payload);
+    } catch (err: any) {
+      toast.error(err.message);
+    }
+
+    toast.success('You are now a member!');
+
+    setTimeout(() => {
+      setStudentId('');
+      setFirstName('');
+      setLastName('');
+    }, 500);
   };
 
   return (
-    <section className='mx-auto max-w-sm pt-40 font-googleSans-regular text-white'>
+    <section className='mx-auto min-h-screen max-w-sm pt-40 font-googleSans-regular text-white'>
       <h1 className='font-merchant-thin-condensed text-4xl'>Join GDSC—USLS!</h1>
 
       <form onSubmit={handleAdd} className='mt-12 flex flex-col gap-y-4'>
