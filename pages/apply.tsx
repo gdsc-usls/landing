@@ -1,4 +1,4 @@
-import React, { FormEventHandler } from 'react';
+import React, { FormEventHandler, useState } from 'react';
 import { gsap } from 'gsap';
 import useLayoutEffect from '~/hooks/useIsomorphicLayoutEffect';
 import { doc, getDoc, serverTimestamp, setDoc } from 'firebase/firestore';
@@ -13,9 +13,10 @@ type Member = {
 };
 
 export default function Apply() {
-  const [firstName, setFirstName] = React.useState('');
-  const [lastName, setLastName] = React.useState('');
-  const [studentId, setStudentId] = React.useState('');
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [studentId, setStudentId] = useState('');
+  const [loading, setLoading] = useState(false);
 
   useLayoutEffect(() => {
     gsap.to('body', {
@@ -32,6 +33,8 @@ export default function Apply() {
   const handleAdd: FormEventHandler = async (e) => {
     e.preventDefault();
 
+    setLoading(true);
+
     const payload: Omit<Member, 'id'> = {
       firstName,
       lastName,
@@ -42,6 +45,7 @@ export default function Apply() {
       const user = await getDoc(doc(db, 'membership', studentId));
       if (user.exists()) {
         toast.error('You are already a member.');
+        setLoading(false);
         return;
       }
     } catch (err: any) {
@@ -55,6 +59,7 @@ export default function Apply() {
     }
 
     toast.success('You are now a member!');
+    setLoading(false);
 
     setTimeout(() => {
       setStudentId('');
@@ -95,8 +100,12 @@ export default function Apply() {
           <p>All of the information I provided is true and correct.</p>
         </div>
 
-        <button type='submit' className='rounded bg-white py-2 text-black'>
-          Become a Member
+        <button
+          type='submit'
+          disabled={loading}
+          className='h-[45px] rounded bg-white text-black'
+        >
+          {loading ? <span className='loader' /> : <p>Become a Member</p>}
         </button>
       </form>
     </section>
