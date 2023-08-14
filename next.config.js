@@ -9,6 +9,11 @@ const nextConfig = {
         destination: 'https://awards.gdsc-usls.live',
         permanent: false,
       },
+      {
+        source: '/apply',
+        destination: 'https://forms.gle/gKqw4DpnV3EwQCiHA',
+        permanent: false,
+      },
     ];
   },
 };
