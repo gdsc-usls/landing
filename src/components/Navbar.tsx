@@ -140,7 +140,7 @@ const Menu = ({ handleMenu }: { handleMenu: () => void }) => {
     },
     {
       text: 'apply',
-      href: '/apply',
+      href: '/member',
       behaviour: 'link',
     },
     {
