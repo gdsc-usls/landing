@@ -96,6 +96,7 @@ export default function Apply() {
               onChange={(e) => setStudentId(e.target.value)}
               label='Student ID'
               type='text'
+              minLength={7}
               maxLength={7}
             />
 
