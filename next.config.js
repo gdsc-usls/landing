@@ -14,6 +14,11 @@ const nextConfig = {
         destination: 'https://forms.gle/gKqw4DpnV3EwQCiHA',
         permanent: false,
       },
+      {
+        source: '/membership',
+        destination: 'https://forms.gle/cD4iv3SRHWHAwZX36',
+        permanent: false,
+      },
     ];
   },
 };
