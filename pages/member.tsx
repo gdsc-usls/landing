@@ -114,16 +114,6 @@ export default function Apply() {
           </form>
         </div>
       )}
-
-      <iframe
-        title='test'
-        src='https://docs.google.com/forms/d/e/1FAIpQLSdZcDoLjnmYY0g0-Z2TyIdsf7rHukRKf1zqrm6Rm9AJGdtxkA/viewform?embedded=true'
-        width='640'
-        height='2448'
-        className='mx-auto rounded-lg'
-      >
-        Loading…
-      </iframe>
     </section>
   );
 }
