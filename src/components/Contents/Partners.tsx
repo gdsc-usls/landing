@@ -34,7 +34,7 @@ export const Partners = () => {
     },
   ];
 
-  const partnersGDSC = ['Philippines', 'USTP', 'DLSU'];
+  // const partnersGDSC = ['Philippines', 'USTP', 'DLSU'];
 
   const longLogoPartners = [
     {
@@ -72,41 +72,6 @@ export const Partners = () => {
               width={80}
               className='h-16 w-auto  scale-[0.6] sm:scale-75 md:scale-100'
             />
-          ))}
-        </div>
-        {/* GDSC */}
-        <div className='my-10 flex flex-wrap items-center justify-center gap-10 md:gap-20 lg:my-20'>
-          <div>
-            <Image
-              src='/images/icons/gdsc-logo.svg'
-              alt='gdsc-logo'
-              height={80}
-              width={80}
-              className='logo mx-auto h-20 scale-[0.6] sm:scale-75 md:scale-100'
-            />
-            <p className='-mt-3 text-center font-googleSans-medium font-medium text-white'>
-              Google Developer Group
-            </p>
-            <p className='max-w-xs text-center font-googleSans-regular text-white'>
-              Bacolod
-            </p>
-          </div>
-          {partnersGDSC.map((partner) => (
-            <div className='' key={partner}>
-              <Image
-                src='/images/icons/gdsc-logo.svg'
-                alt='gdsc-logo'
-                height={80}
-                width={80}
-                className='logo mx-auto h-20 scale-[0.6] sm:scale-75 md:scale-100'
-              />
-              <p className='-mt-3 text-center font-googleSans-medium font-medium text-white'>
-                Google Developer Student Clubs
-              </p>
-              <p className='max-w-xs text-center font-googleSans-regular text-white'>
-                {partner}
-              </p>
-            </div>
           ))}
         </div>
         <div
