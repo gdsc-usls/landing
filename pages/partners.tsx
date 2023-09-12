@@ -18,6 +18,7 @@ const Partners = () => {
   }, []);
 
   const partnersGDSC = [
+    'Philippines',
     'De La Salle University',
     'University of Science and Technology of Southern Philippines',
     'Tohoku University',
@@ -55,7 +56,7 @@ const Partners = () => {
   const router = useRouter();
 
   return (
-    <section className='contain relative z-20 flex min-h-[70vh] flex-col items-center justify-center pt-44 pb-36 xl:mb-96 xl:min-h-screen xl:pb-96'>
+    <section className='contain relative z-20 flex min-h-[70vh] flex-col items-center justify-center pt-44 xl:min-h-screen'>
       <p
         id='partners-title'
         className='contain text-center font-merchant-thin-condensed text-white [fontSize:clamp(1.3rem,4vw,3rem)]'
@@ -77,6 +78,21 @@ const Partners = () => {
         id='partners-logos'
         className='my-10 flex flex-wrap items-center justify-center gap-10 md:gap-20 lg:my-20'
       >
+        <div>
+          <Image
+            src='/images/icons/gdsc-logo.svg'
+            alt='gdsc-logo'
+            height={80}
+            width={80}
+            className='logo mx-auto h-20 scale-[0.6] sm:scale-75 md:scale-100'
+          />
+          <p className='-mt-3 text-center font-googleSans-medium font-medium text-white'>
+            Google Developer Group
+          </p>
+          <p className='max-w-xs text-center font-googleSans-regular text-white'>
+            Bacolod
+          </p>
+        </div>
         {partnersGDSC.map((partner) => (
           <div className='' key={partner}>
             <Image
@@ -109,6 +125,22 @@ const Partners = () => {
         alt='Dotted Grids'
         fill
         className='pointer-events-none z-[-2] object-contain opacity-80'
+      />
+      <Image
+        priority
+        src='/images/elements/swirlGlass.png'
+        alt='Swirl Glass'
+        height={800}
+        width={600}
+        className='pointer-events-none -top-full rotate-0 -scale-x-100 md:rotate-0 lg:rotate-12 xl:absolute'
+      />
+      <Image
+        priority
+        src='/images/gradients/gradientRedYellow.png'
+        alt='Gradient Red'
+        height={1000}
+        width={1000}
+        className='pointer-events-none absolute top-0 left-0  z-[-1] mr-40 scale-x-[-1] lg:-top-96'
       />
     </section>
   );
