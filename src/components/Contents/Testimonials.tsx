@@ -23,19 +23,19 @@ export const Testimonials = () => {
     // },
     {
       name: 'Joseph Dale Bañares',
-      role: 'Software Engineer',
+      role: 'Chief Technology Officer',
       message:
         'GDSC has provided me with invaluable experiences, opportunities, and connections, and has allowed me to grow both technically and socially within a supportive community of passionate learners.',
     },
     {
       name: 'Leigh Andrew Eslawa',
-      role: 'Graphic Designer',
+      role: 'Former Graphics Lead',
       message:
         'Working for GDSC has been like embarking on a grand literary adventure, with each chapter bringing new lessons, experiences, and new insights that will undoubtedly shape my future.',
     },
     {
       name: 'Josh Daniel Bañares',
-      role: 'Software Engineer',
+      role: 'Former CTO',
       message:
         'GDSC has been a catalyst for my personal growth. It has enabled me to connect with exceptional individuals, learn critical skills, and grow as a person.',
     },
