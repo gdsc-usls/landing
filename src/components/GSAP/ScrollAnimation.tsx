@@ -35,6 +35,7 @@ export const ScrollAnimation = ({
       target,
       {
         y: 250,
+        opacity: 0,
       },
       {
         scrollTrigger: {
@@ -43,6 +44,7 @@ export const ScrollAnimation = ({
           trigger: trigger as string,
           toggleActions: 'restart none none reset',
         },
+        opacity: 1,
         y: 0,
         duration: 1.5,
         stagger: stag,
