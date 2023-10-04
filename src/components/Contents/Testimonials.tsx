@@ -4,32 +4,38 @@ import Image from 'next/image';
 export const Testimonials = () => {
   const testimonials = [
     {
-      name: 'Gian Aibo Boyero',
+      name: 'Jarl Briones',
       role: 'GDSC USLS Lead',
       message:
-        "GDSC-USLS is an extraordinary community of talented and dedicated individuals who constantly strive to learn, grow and achieve their goals. I am so grateful to be a part of this community, and I know that I'm learning, growing every day, and had limitless opportunities because of what they have established.",
+        'GDSC - USLS has been instrumental in my growth, helping me tap into my potential and drive positive change within our community.',
     },
     {
-      name: 'Jiyun Bae',
-      role: 'GDSC SWU Lead',
+      name: 'Gian Aibo Boyero',
+      role: 'Former GDSC USLS Lead',
       message:
-        'It was a pleasure to work with GDSC-USLS. Gian has a wonderful team of kind and helpful people, and the positive energy that comes from this team is worth some praise. It is an honour to have worked with such a team.',
+        "GDSC - USLS is an extraordinary community of talented and dedicated individuals who constantly strive to learn, grow and achieve their goals. I am so grateful to be a part of this community, and I know that I'm learning, growing every day, and had limitless opportunities because of what they have established.",
     },
+    // {
+    //   name: 'Jiyun Bae',
+    //   role: 'GDSC SWU Lead',
+    //   message:
+    //     'It was a pleasure to work with GDSC-USLS. Gian has a wonderful team of kind and helpful people, and the positive energy that comes from this team is worth some praise. It is an honour to have worked with such a team.',
+    // },
     {
       name: 'Joseph Dale Bañares',
-      role: 'Software Engineer',
+      role: 'Chief Technology Officer',
       message:
         'GDSC has provided me with invaluable experiences, opportunities, and connections, and has allowed me to grow both technically and socially within a supportive community of passionate learners.',
     },
     {
       name: 'Leigh Andrew Eslawa',
-      role: 'Graphic Designer',
+      role: 'Former Graphics Lead',
       message:
         'Working for GDSC has been like embarking on a grand literary adventure, with each chapter bringing new lessons, experiences, and new insights that will undoubtedly shape my future.',
     },
     {
       name: 'Josh Daniel Bañares',
-      role: 'Software Engineer',
+      role: 'Former CTO',
       message:
         'GDSC has been a catalyst for my personal growth. It has enabled me to connect with exceptional individuals, learn critical skills, and grow as a person.',
     },
