@@ -2,10 +2,10 @@ import React from 'react';
 import { gsap } from 'gsap';
 import Image from 'next/image';
 import useLayoutEffect from '~/hooks/useIsomorphicLayoutEffect';
-import { useGlobal } from '~/contexts/GlobalContext';
+import { useStore } from '~/hooks/useStore';
 
 export const Loader = () => {
-  const { unmountLoader, handleUnmountLoader } = useGlobal();
+  const { unmountLoader, setUnmountLoader } = useStore();
 
   useLayoutEffect(() => {
     const tl: GSAPTimeline = gsap.timeline({
@@ -83,7 +83,7 @@ export const Loader = () => {
         .to('#loader-bg', {
           duration: 0.8,
           opacity: 0,
-          onComplete: () => handleUnmountLoader(),
+          onComplete: () => setUnmountLoader(),
         })
         .to(
           '.menu-burger, .logo',
@@ -125,7 +125,7 @@ export const Loader = () => {
           '>'
         );
     }
-  }, [handleUnmountLoader, unmountLoader]);
+  }, [setUnmountLoader, unmountLoader]);
 
   const divColors = [
     'bg-red-700',
@@ -135,41 +135,37 @@ export const Loader = () => {
     'bg-black',
   ];
 
-  return (
+  return !unmountLoader ? (
     <>
-      (
-      {!unmountLoader && (
-        <>
-          <div
-            id='loader-bg'
-            className='fixed top-0 left-0 z-50 grid h-screen w-screen place-items-center '
-          >
-            <div>
-              <Image
-                priority
-                src='/images/icons/gdsc-logo-white.svg'
-                alt='GDSC Logo'
-                height={100}
-                width={100}
-                className='z-10 mx-auto mb-5 scale-75 opacity-0 md:scale-100'
-                id='gdsc-logo'
-              />
-              <div className='text-load z-10 flex gap-4 font-montserrat text-lg text-white [&>p]:opacity-0'>
-                <p>Connect</p>
-                <p>Learn</p>
-                <p>Grow</p>
-              </div>
-            </div>
+      <div
+        id='loader-bg'
+        className='fixed top-0 left-0 z-50 grid h-screen w-screen place-items-center '
+      >
+        <div>
+          <Image
+            priority
+            src='/images/icons/gdsc-logo-white.svg'
+            alt='GDSC Logo'
+            height={100}
+            width={100}
+            className='z-10 mx-auto mb-5 scale-75 opacity-0 md:scale-100'
+            id='gdsc-logo'
+          />
+          <div className='text-load z-10 flex gap-4 font-montserrat text-lg text-white [&>p]:opacity-0'>
+            <p>Connect</p>
+            <p>Learn</p>
+            <p>Grow</p>
           </div>
-          {divColors.map((color) => (
-            <div
-              key={color}
-              className={`${color} gdsc-color absolute top-0  left-0 z-[9] h-screen w-screen [clipPath:polygon(0%_0%,_100%_0%,_100%_100%,_0%_100%)]`}
-            />
-          ))}
-        </>
-      )}
-      )
+        </div>
+      </div>
+      {divColors.map((color) => (
+        <div
+          key={color}
+          className={`${color} gdsc-color absolute top-0  left-0 z-[9] h-screen w-screen [clipPath:polygon(0%_0%,_100%_0%,_100%_100%,_0%_100%)]`}
+        />
+      ))}
     </>
+  ) : (
+    <div />
   );
 };
