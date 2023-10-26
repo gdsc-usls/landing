@@ -83,7 +83,6 @@ export const Loader = () => {
         .to('#loader-bg', {
           duration: 0.8,
           opacity: 0,
-          onComplete: () => setUnmountLoader(),
         })
         .to(
           '.menu-burger, .logo',
@@ -91,6 +90,7 @@ export const Loader = () => {
             duration: 0.5,
             opacity: 1,
             stagger: 0.2,
+            onComplete: () => setUnmountLoader(),
           },
           '-=0.8'
         );
@@ -98,16 +98,19 @@ export const Loader = () => {
       tl.fromTo(
         '.h1-anim',
         {
-          y: 20,
+          opacity: 0,
         },
         {
-          clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+          opacity: 1,
           duration: 0.8,
-          stagger: 0.3,
-          y: 0,
         },
         '-1.7'
       )
+        .to('.h1-anim', {
+          clipPath: 'polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%)',
+          duration: 0.8,
+          stagger: 0.3,
+        })
         .to(
           '#arrow-down, #gdsc-glass-logo',
           {
