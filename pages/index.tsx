@@ -1,6 +1,6 @@
 import React from 'react';
 import { Hero } from '~/components';
-import { Loader, ScrollAnimation } from '~/components/GSAP';
+import { Loader } from '~/components/GSAP';
 import {
   About,
   Events,
@@ -14,16 +14,14 @@ export default function Home() {
     <>
       <Loader />
       <main>
-        <ScrollAnimation>
-          <Hero />
+        <Hero />
 
-          <div className='overflow-x-hidden overflow-y-clip '>
-            <About />
-            <Events />
-            <Partners />
-            <Testimonials />
-          </div>
-        </ScrollAnimation>
+        <div className='overflow-x-hidden overflow-y-clip '>
+          <About />
+          <Events />
+          <Partners />
+          <Testimonials />
+        </div>
 
         <Contact />
       </main>
