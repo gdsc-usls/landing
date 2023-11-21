@@ -19,6 +19,11 @@ const nextConfig = {
         destination: 'https://forms.gle/cD4iv3SRHWHAwZX36',
         permanent: false,
       },
+      {
+        source: '/datacamp',
+        destination: 'https://forms.gle/h3JuXM9J3RpQaJjt9',
+        permanent: false,
+      },
     ];
   },
 };
